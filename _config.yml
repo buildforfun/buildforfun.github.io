@@ -1,0 +1,17 @@
+# Site settings
+title: Build for fun blog
+email: 
+description: "Build for fun blog."
+baseurl: ""
+url: "http://buildforfun.github.io"
+github_username:  buildforfun
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
