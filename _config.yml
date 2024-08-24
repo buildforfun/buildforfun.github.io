@@ -5,6 +5,7 @@ description: "Build for fun blog."
 baseurl: ""
 url: "http://buildforfun.github.io"
 github_username:  buildforfun
+remote_theme: jekyll-theme-minimal
 
 # Build settings
 markdown: kramdown
