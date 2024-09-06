@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Guide to work life"
 excerpt: "Guide to work life"
-date:   2024-09-6 22:00:00
+date:   2024-09-06 22:00:00
 ---
 
 ## Guide to work life
