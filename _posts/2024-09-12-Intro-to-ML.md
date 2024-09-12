@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Intro to Machine learning
-date:   2024-09-12 00:01:0
+date:   2024-09-12 07:00:00
 ---
 
 ## Intro to Machine Learning 
