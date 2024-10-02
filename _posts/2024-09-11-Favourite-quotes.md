@@ -49,3 +49,4 @@ date:   2024-09-11 07:00:00
 | George Mack| Their reality was just a poorly designed video game. |
 | Marcus Aurelius | Perfection of character is this: to live each day as if it was your last without frenzy without apathy and without pretence |
 | Nassim Taleb    | You are rich if and only if money you refuse tastes better than money you accept.   |
+| Andrej Karpathy | I would encourage you to look beyond the established academic game. Think for yourself and from first principles. Do things others don’t do but should. |
