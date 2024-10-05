@@ -6,6 +6,22 @@ date:   2024-09-10 07:00:00
 
 ## The Timeline of the Universe
 
+The main highlights so far have been:
+
+1. The Big Bang Era (13.8 billion years ago)
+2. Cosmic Dark Ages (13.8 billion - 13.6 billion years ago)
+3. Stellar and Galactic Formation (13.6 billion - 10 billion years ago)
+4. Solar System Formation (4.6 billion years ago)
+5. Early Earth (4.6 billion - 3.8 billion years ago)
+6. Origin of Life (3.8 billion years ago)
+7. Evolution of Complex Life (540 million - 66 million years ago)
+8. Age of Mammals (66 million - 7 million years ago)
+9. Human Evolution (7 million years ago - 300,000 years ago)
+10. Homo Sapiens Era (300,000 years ago - 10,000 years ago)
+11. Human Civilization (10,000 years ago - present)
+12. Future of the Solar System (5 billion years from now)
+
+
 Let's go on a journey through the timeline of the universe!
 
 13.8 billion years ago all the matter was concentrated in a single very dense point. An explosion caused all the matter to expand from this point. The universe is still expanding from this point! We call this event The Big Bang. As matter passed through the universe, enough matter coliding caused stars and galaxies to be formed. The solar system formed from a rotating cloud of gas and dust called the solar nebula. Our solar system is located in one of the spiral arms of the milky way. The Milky way is said to be one of 100-400 billion galaxies in the observable universe. Heavy elements, such as iron and nickel, formed through nucleosynthesis in the cores of massive stars and ejected into space through supernova explosions. Lighter elements, such as hydrogen and helium, are abundant in the early solar system, contributing to the formation of the Sun and outer gas giant planets.
@@ -51,3 +67,10 @@ Some notable events:
 - In 1990, Tim Berners-Lee invents the World Wide Web.
 
 Looking ahead into the future, 5 billion years from now, the Sun will will exhaust the hydrogen fuel in its core and start fusing helium. The Sun's outer layers may extend beyond Earth's current orbit forming a red giant. Mercury and Venus will likely be engulfed by the expanding Sun. Earth may survive but will become uninhabitable due to extreme heat. Mars will survive the Sun's expansion, making Mars habitable might be a good idea...
+
+A very useful image on timeline of civilisation[1]:
+<img src="/assets/timeline-world.webp" width="80%">
+
+
+Citations:
+[1] https://usefulcharts.com/products/timeline-of-world-history

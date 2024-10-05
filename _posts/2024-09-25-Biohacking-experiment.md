@@ -21,11 +21,8 @@ This means I need to get my weight down to: 72kg. I am currently 83kg. That mean
 
 ## Intervention
 
-### Food
-I will be taking food logs. I'm too lazy to track this using an app such as myfitnesspal. Instead I am just going to note the food down in notes app. I'm hoping the act of noting will help me self correct.
-
 ### Physical exercise
-Signed up to the gym on the 25.09.24. The plan is to exercise 6 days a week. This alongside muay thai which i do 2x a week should put me on the path to hitting my target weight.
+Signed up to the gym on the 25.09.24. The plan is to go gym as often as I can. This alongside muay thai which i do 2x a week should put me on the path to hitting my target weight.
 
 ## Data
 Date: 25.09.24 <br>
