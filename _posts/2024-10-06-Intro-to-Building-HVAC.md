@@ -3,14 +3,12 @@ layout: post
 title:  "Intro to Building HVAC"
 date:   2024-10-06 07:00:00
 ---
+- [How does a boiler work?](#how-does-a-boiler-work)
+- [How does a heat pump work?](#how-does-a-heat-pump-work)
+- [How do mechanical ventilation systems work?](#how-do-mechanical-ventilation-systems-work)
+- [How do storage tanks work?](#how-do-storage-tanks-work)
 
-## Intro to Building HVAC
-
-## Table of Contents
-1. [How does a boiler work](##_How_does_a_boiler_work)
-2. [How does a heat pump work](##_How_does_a_heat_pump_work)
-
-## How does a boiler work
+## How does a boiler work?
 1. Natural Gas delivery
     - Natural gas is sourced, extracted, and delivered to buildings through an extensive network of pipelines that cover long distances.
 2. Combustion chamber
@@ -34,10 +32,10 @@ date:   2024-10-06 07:00:00
 8. Flue
     - Cold exhaust gases are vented through the flue pipe
 
-![boiler diagram](/assets/boiler_diagram.png)
+![boiler diagram](/assets/boiler_diagram.png){:width="60%"}<br>
 
 
-## How do heat pumps work?
+## How does a heat pump work?
 1. **Refrigerant**
     - Heat pumps operate using a special fluid called the refrigerant. What’s unique about refrigerants is that it boils at very low temperatures. This characteristic allows the capture of energy even from low temperatures. The refrigerant begins as a low pressure, low temperature liquid, which is directed to the evaporator.
 2. **Evaporator**
@@ -51,3 +49,73 @@ date:   2024-10-06 07:00:00
     - The expansion vessel drops the pressure, leading to a drop in temperature. The now low pressure, low temperature liquid repeats the cycle by returning to the evaporator.
 
 ![heat_pump_diagram](/assets/heat_pump_diagram.png)
+
+
+## How do mechanical ventilation systems work?
+The main types of continuous mechanical ventilation systems are:
+
+- Centralised Mechanical Extract Ventilation (MEV)
+- Centralised Mechanical Ventilation with Heat Recovery (MVHR)
+- Decentralised Mechanical Extract Ventilation (dMEV)
+- Decentralised Mechanical Ventilation with Heat Recovery (dMVHR)
+
+**Centralised Mechanical Extract Ventilation (MEV)**
+
+MEV is an extract ventilation system that operates continuously at a low air flow rate. It operates by removing stale air out of wet rooms (bathrooms and kitchen). Fresh air enters the dwelling via air bricks, window vents and gaps in the dwelling.
+
+**Mechanical Ventilation with Heat Recovery (MVHR)**
+
+While MEV systems extract stale air and expel it outside, MVHR recover the heat from the stale air and use it to prewarm fresh air entering the house.
+
+1. Fresh air
+    - The process begins with fresh outdoor air entering the house which gets filtered to remove impurities. The air is taken to the heat exchanger.
+2. Heat exchanger
+    - The heat exchanger is the main component of the MVHR, this is where the fresh air is preheated using heat from the extract air.
+    - The preheated air is passed through a fan that pushes the air to a heating coil which heats up the prewarmed air to the desired temperature. This uses less energy as the air is warmer than the outdoor temperature that would have been used.
+    - The control system determines the fan speeds based on data about the indoor air quality, temperature and humidity.
+3. Supply air
+    - The conditioned supply air then channelled through the ductwork into various rooms via vents.
+4. Extract air
+    - Stale warm air is then extracted from wet rooms to the heat exchanger.
+    - The heat from the stale warm air that would have otherwise been wasted is recovered when it is passed through the heat exchanger.
+5. Exhaust air
+    - The now cold and stale air is expelled from the building using a dedicated exhaust fan.
+
+**Decentralised Mechanical Extract Ventilation (dMEV)**
+
+dMEV systems work similarly to centralised MEV, the main difference is that separate fans are installed directly in the wet rooms instead of one centralised unit.
+
+**Decentralised Mechanical Ventilation with Heat Recovery (dMVHR)**
+
+dMVHR are similar to dMEV, the difference being the stale air from wet rooms is passed over a heat exchanger and the heat energy is passed to the fresh air entering the dwelling.
+
+**Centralised MEV Systems**
+
+- Have a single central extractor fan unit mounted in the loft or a cupboard.
+- The central unit is connected via ductwork to extract air from multiple wet rooms like bathrooms, kitchens, and utility rooms.
+- Air is drawn from these rooms through ducts installed in the walls and expelled outside through a single vent.
+- Provide simultaneous extraction from up to 6 wet rooms.
+- Require proper ducting installation throughout the property.
+
+**Decentralised MEV Systems**
+
+- Have multiple individual extractor fans installed directly in each wet room.
+- No ductwork is required as each fan extracts air directly from that room.
+- Fans are usually mounted on the wall or ceiling of the wet room.
+- Each room's extraction is independent and not connected to a central unit.
+- Offer more flexibility in installation as no ducting is needed.
+
+## How do storage tanks work?
+
+1. Cold water enters the tank from the bottom
+2. Heating can occur via two methods:
+   - Indirect heating: A coil inside the tank carries hot water from an external heat source (like a boiler or heat pump), which heats the water in the tank.
+   - Direct heating: An electric immersion heater inside the tank heats the water directly.
+3. Stratification:
+   - hot water rises to the top due to stratification
+   - layers water with hotest at the top
+4. Tank insulated to minimise heat loss over time
+5. Thermostat keeps temperature at a setpoint
+6. Hot water drawn off from the top as needed.
+7. As hot water is used, this is replaced with cold water at the bottom
+

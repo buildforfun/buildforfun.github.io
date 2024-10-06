@@ -13,11 +13,23 @@ Applying
 ---
 Firstly, when applying for a job role, ask yourself am I right for the role? And, perhaps more importantly, is the role right for you? These are the two different questions that an interview seeks to answer. Make sure you prepare by researching your likely responsibilities and the company's values. Your curiosity for the role should drive you to do this anyway.
 
+You may also be given invitations to apply for other roles. If possible, take them. It would be foolish to not take offers seriously.
+
 The Interview
 ---
-Once you have found a role you like and the company likes you, they will invite you for an interview. Not all interviewers ask the same questions. Rather than preparing for all possible questions, go through all your completed projects. Think about how your experience/projects shows different skills. Practice using these examples in questions by going through some interview questions. A useful framework for answering interview questions is STAR which stands for Situation, Task, Action and Result. This formula makes sure you hit all the points that the interviewer is looking for.
+Once you have found a role you like and the company likes you, they will invite you for an interview. Not all interviewers ask the same questions. 
+
+As you are going to interview with another company or first time, it is important to make sure you have a clear understanding of what you are doing. 
+
+First, trace what you are doing at work right back to the foundations. Make sure you can explain the foundations really well. Often as you work you become more niche and niche. Having a clear understanding of how your work links to the foundation is crucial.
+
+Secondly, go through all your completed projects. List out all the projects. Ideally you have some sort of notes file with all of these listed out.
+
+Think about how your experience/projects shows different skills. Practice using these examples in questions by going through some interview questions. A useful framework for answering interview questions is STAR which stands for Situation, Task, Action and Result. This formula makes sure you hit all the points that the interviewer is looking for.
+
 
 Near the end of the interview, the interviewer will ask - do you have any questions for us. That's where you bring out a long list of questions. Either remember all the questions or print out a sheet of questions. At the end of my interview, the interviewer said he felt like I had interviewed him. Try and not to go overboard, but asking lots of good questions shows interest and sets you apart!
+
 
 Starting to work
 ----

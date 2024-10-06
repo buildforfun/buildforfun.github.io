@@ -67,6 +67,26 @@ A black body emitter that has a higher temperature emits with a higher emissive 
 In reality, some bodies are absorbed, transmitted and reflected. To capture the surface property of a material, emissivity is used in the formula. Black bodies have an emissivity of 1.<br>
 ![alt text](/assets/image-12.png){:width="20%"}<br>
 
+### What Happens When More Heat Is Added To A System?
+
+When heat is added to a system, two main things can change: the sensible heat and the latent heat.
+
+Sensible heat is when the temperature rises, but there is no change in system volume or pressure.
+The kinetic energy of the particles increases. The sensible heat can be calculated using the system mass, specific heat capacity and the change in temperature.
+
+When more heat is added to a system the state of the system changes, this is where the energy is stored or released this is described as latent heat.
+This is where internal energy or potenital energy of the system changes. 
+
+![alt text](/assets/image-3.png){:width="60%"}<br>
+
+The graph below shows the various processes by which latent heat can occur. It’s worth noting that the temperature during latent heat changes does not change as shown by the horizontal lines in the graph below.
+
+![alt text](/assets/image-4.png){:width="60%"}<br> 
+
+The application to building is mostly:
+- Sensible cooling/heating affects air temperature. Heat transfer through the building envelope is primarily sensible heat
+- Latent cooling/heating affects moisture content/humidity. Moisture management in the envelope involves latent heat processes
+
 ## Laws of thermodynamics
 1. Zeroth Law: 
    - thermal equilibrium.
@@ -85,14 +105,12 @@ In reality, some bodies are absorbed, transmitted and reflected. To capture the 
    - As temperature approaches absolute zero, entropy approaches a minimum value.
    - Perfect crystal at absolute zero has zero entropy.
 
-
-
-
 ## Heat transfer in buildings
 The building envelope consists of:
 - Walls
 - Roof
 - Windows and Doors
+- Floors
 
 Heat is lost in various ways in the building.  Walls are a significant source of heat loss in buildings, accounting for approximately 35% of total heat loss.
 
@@ -107,11 +125,11 @@ The main method of heat loss through walls is via conduction. There is some heat
 
 Heat is lost from the inside air to the inside surface by convection and radiation. The heat is then transferred through the walls by conduction and then lost to external air from the external surface by convection and radiation. The surface resistance of the indoor and external walls depends on the heat flow direction. Temperature and velocity of air but it’s mainly heat flow direction. There are standard figures that can be looked up on this. The resistance of the wall itself can be found in the thickness of the wall over the thermal conductivity of the material. This can be used to calculate the total resistance and then the overall U-value called thermal transmittance. The overall heat loss rate through the building can then be calculated.
 
-1. **Inside to Wall Surface**:
+1. Inside to Wall Surface:
    - Heat is transferred from indoor air to the interior wall surface through convection and radiation.
-2. **Through the Wall**:
+2. Through the Wall:
    - Heat moves through the wall material by conduction.
-3. **Wall Surface to Outside**:
+3. Wall Surface to Outside:
    - Heat is lost from the exterior wall surface to the outdoor environment through convection and radiation.
 
 Surface Resistance
@@ -138,7 +156,7 @@ U-Value Calculation
 
 Heat Loss Rate Calculation
 - The heat loss rate through a building element can be calculated using:
-  Q = U * A * ΔT
+  Q = U  A  ΔT
   Where:
   - Q is the heat loss rate (W)
   - U is the U-value (W/m²K)
@@ -230,7 +248,7 @@ Point thermal bridge
 
 ![alt text](/assets/image-13.png){:width="40%"}<br>
 
-### Infiltration and Ventilation
+## Infiltration and Ventilation
 
 Infiltration and ventilation are critical factors in building energy modelling that determine the air flow patterns and energy losses in a building.
 
@@ -238,167 +256,111 @@ Infiltration refers to the uncontrolled flow of outdoor air into a building thro
 
 Ventilation, on the other hand, refers to the controlled flow of outdoor air into a building, often through mechanical systems or intentional openings like windows. Ventilation is necessary to provide fresh air and maintain indoor air quality. Building energy models account for both the uncontrolled infiltration and the controlled ventilation to determine the overall air change rate and associated heating/cooling loads. 
 
-## Infiltration
+### Infiltration
 
-Infiltration is the uncontrolled air leakage through the building envelope. The modeling approach you described is commonly used:
-1. Measure air tightness (e.g., ACH50)
+Infiltration is the uncontrolled air leakage through the building envelope. 
+Infiltration heat loss (Hi) accounts for uncontrolled air leakage through cracks and gaps. 
+The modeling approach you described is commonly used:
+1. Measure air tightness (e.g., ACH50) e.g blower door test or pulse test
 2. Apply empirical divisors to estimate average infiltration rate
 3. Account for building characteristics (type, height, sheltering)
 
-The infiltration rate can be further refined using models that account for wind speed and temperature difference, such as:
+The infiltration rate can be further refined using models that account for wind speed and temperature difference. Using:
+- Simple formula:
+  - Hi = ρ  Cp  Qi  ΔT
+  Where:
+   - Qi is the infiltration rate
 
-Q = Idesign * Fschedule * [A + B|ΔT| + C*Ws + D*Ws^2]
+### Ventilation
+Ventilation is the controlled introduction of outdoor air. 
+It can be natural (through windows and other openings) or mechanical (through HVAC systems).
+Ventilation heat loss (Hv) is calculated based on the volume of air exchanged.
 
-Where:
-- Q is the infiltration rate
-- Idesign is the design infiltration rate
-- Fschedule is a scheduling factor
-- ΔT is the indoor-outdoor temperature difference
-- Ws is the wind speed
-- A, B, C, D are empirical coefficients
-
-## Ventilation
-
-Ventilation is indeed the controlled introduction of outdoor air. It can be natural (through windows and other openings) or mechanical (through HVAC systems). The ventilation rate is typically calculated based on:
-
-1. Building codes and standards (e.g., ASHRAE 62.1)
-2. Occupancy levels
-3. Building use type
-
-## Total Heat Losses
-
-Your formula for total heat loss is correct:
-
-H = Ht + Hv + Hi
-
-Let's expand on each component:
-
-1. Transmission Heat Loss (Ht):
-   Ht = Σ(U * A * ΔT)
-   Where:
-   - U is the U-value of each building element
-   - A is the area of each element
-   - ΔT is the temperature difference
-
-2. Ventilation Heat Loss (Hv):
-   Hv = ρ * Cp * Qv * ΔT
+Natural Ventilation
+ - Natural ventilation relies on pressure differences caused by wind and temperature gradients to move air through a building. Types include:
+   - single sided (openings on one side of a space)
+   - cross ventilation (opposite sides of a space)
+   - stack ventilation(temperature differences to create airflow)
+     - Warm air rises and exits through high openings, drawing in cooler air at lower levels
+ - Mechananical ventilation:
+   - Mechanical Ventilation use fans to control airflow. They can provide more consistent ventilation rates but require energy to operate.
+ - Simple formula:
+   - Hv = ρ  Cp  Qv  ΔT
    Where:
    - ρ is air density
    - Cp is specific heat capacity of air
    - Qv is the ventilation rate
    - ΔT is the temperature difference
+  
+## Total Heat Losses
+Your formula for total heat loss is correct:
+H = Ht + Hv + Hi
+Where:
+H = overall heat loss (W)
+Ht = heat loss due to transmission through building envelope 
+Hv = heat loss due to ventilation
+Hi = heat loss due to infiltration
 
-3. Infiltration Heat Loss (Hi):
-   Hi = ρ * Cp * Qi * ΔT
-   Where:
-   - Qi is the infiltration rate
+Let's expand on each component:
+1. Transmission Heat Loss
+2. Ventilation Heat Loss
+3. Infiltration Heat Loss
 
 Additional considerations:
-
-- Thermal bridging should be accounted for in the transmission losses
 - Ground heat losses are often calculated separately using methods like the ASHRAE slab-on-grade perimeter method
 - Solar gains and internal gains (from occupants, equipment, etc.) should be subtracted from the total heat loss to determine the net heating load
 
-
-## Total heat losses through a building
-The total heat losses through a building is made up of: direct losses, ventilated losses, unconditioned losses and ground losses. The overall heat loss from a building can be calculated using the formula:
-   H = Ht + Hv + Hi
-   Where:
-   H = overall heat loss (W)
-   Ht = heat loss due to transmission through building envelope 
-   Hv = heat loss due to ventilation
-   Hi = heat loss due to infiltration
-
-1. Transmission heat loss (Ht) occurs through the building envelope (walls, roof, floor, windows, doors) and is calculated as:
-
-   Ht = U * A * ΔT
-
-   Where:
-   U = U-value/heat transfer coefficient of the surface (W/m2K)
-   A = Area of the surface (m2)
-   ΔT = Temperature difference between inside and outside (K)
-
-2. This calculation needs to be done for each surface (walls, roof, windows, etc.) separately and then summed.
-
-3. Ventilation heat loss (Hv) is calculated based on the volume of air exchanged.
-
-4. Infiltration heat loss (Hi) accounts for uncontrolled air leakage through cracks and gaps.
-
-5. The total heat loss is the sum of transmission losses through all surfaces plus ventilation and infiltration losses.
-
-6. U-values are key in determining transmission heat loss. Lower U-values indicate better insulation.
-
-7. For slab-on-grade floors, heat loss is calculated differently using a perimeter method.
-
-8. Thermal bridging should be accounted for, typically by applying a correction factor to transmission losses.
-
-9.  Heat loss calculations help in sizing heating systems and identifying areas for improving energy efficiency.
+Passive house is an optional standard for energy efficienct buildings.
+There are specific requirements to be classed as a Passive house, however this is beyond the scope of this post.
+For more information on this please visit the Passive House website which can be accessed through this [link](https://passivehouse.com/).
 
 
+## Optimising energy performance in buildings
+1. Thermal Mass: Utilizing materials with high heat capacity to stabilize indoor temperatures
+2. Passive Solar Design: Optimizing building orientation and glazing to harness solar energy
+3. Airtightness: Minimizing uncontrolled air leakage to reduce energy waste
+4. Efficient HVAC Systems: Implementing high-performance heating, cooling, and ventilation solutions
 
 
-Passive house is an optional standard for energy efficienct buildings. There are specific requirements to be classed as a Passive house, however this is beyond the scope of this post. For more information on this please visit the Passive House website which can be accessed through this [link](https://passivehouse.com/). You can find the main concepts behind Passive house in the /assets/image below:
+1. Thermal Mass
+Thermal mass can significantly stabilize indoor temperatures by absorbing and releasing heat slowly. This strategy:
+- Reduces temperature fluctuations, improving comfort
+- Decreases heating and cooling loads
+- Works best when coupled with proper insulation
 
-To calculate the total heat loss for a building:
-1. Calculate the heat loss for each building element (walls, roof, floor, windows, doors) separately.
-2. Sum up all these individual heat losses.
-3. Add heat losses due to ventilation and air infiltration.
+2. Passive Solar Design
+Optimising building orientation and glazing can harness solar energy effectively:
+- South-facing windows (in the Northern Hemisphere) maximize winter sun exposure
+- Properly sized overhangs or shading devices prevent overheating in summer
+- Thermal mass floors or walls can absorb and store solar heat
 
-### Optimising energy performance in buildings
-Building physics focuses on optimizing energy performance through:
+3. Airtightness
+Minimising uncontrolled air leakage is critical for energy efficiency:
+- Reduces heat loss in winter and heat gain in summer
+- Improves indoor air quality by controlling moisture and pollutant infiltration
+- Should be combined with controlled ventilation to ensure healthy indoor air quality
 
-**Heat Flow Management**
-- Minimizing unwanted heat loss in winter and heat gain in summer
-- Utilizing thermal insulation to reduce heat transfer through building envelopes
-- Addressing thermal bridges to prevent localized heat loss
+4. Efficient HVAC Systems
+High-performance heating, cooling, and ventilation solutions can significantly reduce energy consumption:
+- Heat pumps (air-source or ground-source) for efficient heating and cooling
+- Smart controls and zoning for optimized operation
 
-**Daylighting and Artificial Lighting**
-- Maximizing natural light utilization to reduce artificial lighting needs
-- Implementing energy-efficient lighting systems
+5. High-Performance Building Envelope: 
+   - Super-insulation to minimize heat transfer
+   - High-performance windows with low U-values and appropriate solar heat gain coefficients
 
-**Ventilation and Air Quality**
-- Balancing fresh air requirements with energy efficiency
-- Implementing heat recovery ventilation systems
+6. Daylighting:
+   - Maximizing natural light to reduce artificial lighting needs
+   - Implementing light shelves or other reflective surfaces to distribute daylight deeper into spaces
 
-## Energy Efficiency Metrics
+7. Energy-Efficient Lighting:
+   - LED lighting with smart controls
+   - Occupancy sensors and daylight harvesting systems
 
-Building physics utilizes various metrics to quantify energy performance:
-- **U-value**: Measures the rate of heat transfer through a building element (lower is better)
-- **R-value**: Represents thermal resistance of materials (higher is better)
-- **Heat Loss Coefficient**: Quantifies the total fabric and ventilation heat loss of a building
+8. Renewable Energy Integration:
+   - Solar photovoltaic systems for on-site electricity generation
+   - Solar thermal systems for water heating
 
-## Energy Conservation Principles
-Building physics applies several key principles for energy conservation:
-1. **Thermal Mass**: Utilizing materials with high heat capacity to stabilize indoor temperatures
-2. **Passive Solar Design**: Optimizing building orientation and glazing to harness solar energy
-3. **Airtightness**: Minimizing uncontrolled air leakage to reduce energy waste
-4. **Efficient HVAC Systems**: Implementing high-performance heating, cooling, and ventilation solutions
-
-## Energy Modeling and Simulation
-
-Building physics employs advanced modeling techniques to:
-
-- Predict energy consumption
-- Optimize building design for energy efficiency
-- Evaluate the impact of various energy-saving measures
-
-
-
-
-<!-- ## What Happens When More Heat Is Added To A System?
-
-When heat is added to a system, two main things can change: the sensible heat and the latent heat.
-
-Sensible heat is when the temperature rises, but there is no change in system volume or pressure. The kinetic energy of the particles increases. The sensible heat can be calculated using the system mass, specific heat capacity and the change in temperature.
-
-When more heat is added to a system the state of the system changes, this is where the energy is stored or released this is described as latent heat. This is where internal energy or potenital energy of the system changes.
-
-![alt text](/assets/image-3.png){:width="40%"}<br>
-
-The graph below shows the various processes by which latent heat can occur. It’s worth noting that the temperature during latent heat changes does not change as shown by the horizontal lines in the graph below.
-
-![alt text](/assets/image-4.png){:width="40%"}<br> -->
-
-
-<!-- Energy Balance One of the fundamental concepts in building physics is the energy balance. This model categorizes all energy inputs and outputs in a building, following the principle:
-- Energy In = Energy Out - Energy Stored -->
+9.  Building Management Systems (BMS): 
+    - Centralized control and monitoring of building systems
+    - Data analytics for continuous performance optimization
