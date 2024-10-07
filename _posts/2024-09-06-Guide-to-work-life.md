@@ -15,21 +15,22 @@ Firstly, when applying for a job role, ask yourself am I right for the role? And
 
 You may also be given invitations to apply for other roles. If possible, take them. It would be foolish to not take offers seriously.
 
+Interview prep
+---
+Once you have found a role you like and the company likes you, they will invite you for an interview.
+
+1. First, trace what you are doing at work right back to the foundations. Make sure you can explain the foundations really well. Having a clear understanding of how your work links to the foundation is crucial.
+2. Secondly, go through all your completed projects. List out all the projects. Ideally you have some sort of notes file with all of these listed out. Then write a list of skills you need for the new role. For the lazy ones, download the job description/advert and upload it to an AI. Then ask the AI to write out skills needed for the role.
+3. Lastly, try to predict questions for the role. Most likely you will get some right and if not it'll have trained you to think about examples. Again, for the lazy ones ask the ai to write interview questions.  Think about how your experience/projects shows different skills. Practice using these examples in questions by going through some interview questions. A useful framework for answering interview questions is STAR which stands for Situation, Task, Action and Result. This formula makes sure you hit all the points that the interviewer is looking for. Repeat Steps 1-3. <br>
+
 The Interview
 ---
-Once you have found a role you like and the company likes you, they will invite you for an interview. Not all interviewers ask the same questions. 
-
-As you are going to interview with another company or first time, it is important to make sure you have a clear understanding of what you are doing. 
-
-First, trace what you are doing at work right back to the foundations. Make sure you can explain the foundations really well. Often as you work you become more niche and niche. Having a clear understanding of how your work links to the foundation is crucial.
-
-Secondly, go through all your completed projects. List out all the projects. Ideally you have some sort of notes file with all of these listed out.
-
-Think about how your experience/projects shows different skills. Practice using these examples in questions by going through some interview questions. A useful framework for answering interview questions is STAR which stands for Situation, Task, Action and Result. This formula makes sure you hit all the points that the interviewer is looking for.
-
-
-Near the end of the interview, the interviewer will ask - do you have any questions for us. That's where you bring out a long list of questions. Either remember all the questions or print out a sheet of questions. At the end of my interview, the interviewer said he felt like I had interviewed him. Try and not to go overboard, but asking lots of good questions shows interest and sets you apart!
-
+- Make sure tech or equipment is all there + get ready early
+- Stay calm and confident. Get ready to show off.
+  - Take deep breathes.
+- Ask good quesitons.
+  - Near the end of the interview, the interviewer will ask - do you have any questions for us. That's where you bring out a long list of questions. Either remember all the questions or print out a sheet of questions.
+  - At the end of my interview, the interviewer said he felt like I had interviewed him. Try and not to go overboard, but asking lots of good questions shows interest and sets you apart!
 
 Starting to work
 ----
