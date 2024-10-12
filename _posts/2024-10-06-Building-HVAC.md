@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Intro to Building HVAC"
+title:  "Building HVAC"
 date:   2024-10-06 07:00:00
 ---
 - [How does a boiler work?](#how-does-a-boiler-work)

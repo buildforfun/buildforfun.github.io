@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Intro to Building Physics"
+title:  "Building Physics"
 date:   2024-10-05 07:00:00
 ---
 
