@@ -15,7 +15,6 @@ Mental models help you simplify complex things into an easy way.
 | Skin in the game | Trust those who have played the game themselves | 
 | Lay of the land | What the actual situation are on the ground |
 | Reciprocity | Think win-win. The more people you help, the more people you will have willing to help you. |
-| First principles thinking | Break down complex problems or concepts into their most basic components |
 | Entropy | The amount of disorder in a system |
 | Bottlenecks | An area where the stream of something is stopped or slowed down. Think of a clogged artery |
 | Friction | Friction opposes movement of objects. |
