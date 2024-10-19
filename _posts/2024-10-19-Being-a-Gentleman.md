@@ -1,7 +1,6 @@
 ---
 layout: post
-comments: true
-title:  "Being a Gentleman
+title:  "Being a Gentleman"
 date:   2024-10-19 11:00:00
 ---
 
