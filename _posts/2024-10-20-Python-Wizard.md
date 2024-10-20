@@ -142,8 +142,8 @@ The most popular unittest module in python is the unittest module.
          class_ob = Class()
          self.assertEqual(class_ob.func_name(), expected value, "error")
    ```
-4. Run test
-    - command is: python3 -m unittest discover test/
+4. Run command:
+    - ```python3 -m unittest discover test/```
 
 
 ## Debugging

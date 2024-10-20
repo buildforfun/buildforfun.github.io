@@ -5,6 +5,7 @@ description: "Build for fun blog."
 baseurl: ""
 url: "http://buildforfun.github.io"
 github_username:  buildforfun
+future: true
 
 # Build settings
 markdown: kramdown
