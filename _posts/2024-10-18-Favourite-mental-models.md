@@ -23,6 +23,8 @@ Mental models help you simplify complex things into an easy way.
 | Incentives | Rewards drive food, money, relationships and status. |
 | Multiply by zero | Multiplying any number by zero results in zero. |
 | Regression to the mean | Extreme values tend to go back to the mean due to random variation. |
-
-
+| Antifragile| Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same, the antifragile gets better    |
+| Time is precious| Would you pay someone to have the hour you just did? If no, then do something else with your time.      |
+| Death | It is the single best invention of life. Everything clears away in the face of it. |
+| High Agency| High Agency people look to bend reality to their will. They either find a way or they make a way. Don't forget you are dying.|
 

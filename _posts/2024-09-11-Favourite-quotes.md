@@ -24,12 +24,6 @@ date:   2024-09-11 07:00:00
 | Marcus Aurelius | You have power over your mind - not outside events. Realise this, and you will find strength. |
 | Seneca| The primary indication of a well-ordered mind is a man’s ability to remain in one place and linger in his own company.      |
 | Marcus Aurelius | Receive without pride, let go without attachment.    |
-| Inversion  | Approach from opposite end - think backwards. Avoid stupidity. |
-| Antifragile| Antifragility is beyond resilience or robustness. The resilient resists shocks and stays the same, the antifragile gets better    |
-| First principles thinking | separate ideas from underlying assumptions based on them.      |
-| Time is precious| Would you pay someone to have the hour you just did? If no, then do something else with your time.      |
-| Death | It is the single best invention of life. Everything clears away in the face of it. |
-| High Agency| High Agency people look to bend reality to their will. They either find a way or they make a way. Don't forget you are dying.|
 | Chris Hemsworth | Eat and sleep well, Challenge my mind and body to new experiences and immerse myself in nature and share this with the people i love.  |
 | Austin Kleon    | Post as though everyone who can read it has the power to fire you.|
 | George Mack| If struggling to think creatively about a subject, transform it: Turn a thought into a written idea. A written idea into a drawing. A drawing into an equation. An equation into a conversation. In the process of transforming it:you begin to spot new creative connections.   |

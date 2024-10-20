@@ -35,6 +35,8 @@ I mean not everyone is a Duke that get's thrown into a world of drugs, but we ca
   - Creative (drawing, photography)
   - Physical activity (running, martial arts)
 - Dress well
+  - Going into work wear a suit/blazer and shirt
+  - At home wear a shirt and jumper
   - Jeans (black)
   - Flat front chinos (black)
   - Shirts (white, light pink, blue)
