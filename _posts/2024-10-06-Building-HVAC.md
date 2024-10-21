@@ -39,7 +39,8 @@ date:   2024-10-06 07:00:00
 1. **Refrigerant**
     - Heat pumps operate using a special fluid called the refrigerant. What’s unique about refrigerants is that it boils at very low temperatures. This characteristic allows the capture of energy even from low temperatures. The refrigerant begins as a low pressure, low temperature liquid, which is directed to the evaporator.
 2. **Evaporator**
-    - The evaporator, a heat exchanger, interacting with outside air for air source heat pumps, causes the refrigerant to boil as ambient air passes over it, transforming the refrigerant into a low temperature cold vapour. As the liquid boils it gains energy from the outside air, causing it to evaporate into a gas. This vapour is then carried to the compressor. 
+    - The evaporator, a heat exchanger, interacting with outside air for air source heat pumps, causes the refrigerant to boil as ambient air passes over it, transforming the refrigerant into a low temperature cold vapour. As the liquid boils it gains energy from the outside air, causing it to evaporate into a gas. This vapour is then carried to the compressor.
+    - For exhaust air heat pumps, warm stale air is extracted from wet rooms (bathrooms or kitches) through ventilation ducts. The warm air is then passed over the evaporator. Exhaust air heat pumps tend to be low output and can control ventilation as they extract air from homes.
 3. **Compressor**
     - The compressor uses electricity to increase the pressure of the refrigerant which causes the temperature to rise. The high pressure high temperature vapour is then taken to the condenser.
 4. **Condenser**
