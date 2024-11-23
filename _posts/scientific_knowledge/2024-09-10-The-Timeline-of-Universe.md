@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [ scientific_knowledge]
 title:  "The Timeline of the Universe"
 date:   2024-09-10 07:00:00
 ---
