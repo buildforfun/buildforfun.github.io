@@ -1,0 +1,23 @@
+# Site settings
+title: Buildforfun blog posts!
+email: 
+description: "Build for fun blog."
+baseurl: ""
+url: "http://buildforfun.github.io"
+github_username:  buildforfun
+future: true
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+paginate: 5
+paginate_path: "/page:num/"

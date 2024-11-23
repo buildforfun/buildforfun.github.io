@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFE37E9WL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FFE37E9WL2');
+  </script>
+</head>
+
+<div class="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<hr style="margin-top: 20px; margin-bottom: 20px;">
+
+<footer class="site-footer" style="border-top: none;">
+  <div class="wrap">
+      <ul style="list-style-type: none;">
+          <a href="https://github.com/{{ site.github_username }}">
+            <span class="username">{{ site.github_username }} github repo</span>
+          </a>
+      </ul>
+  </div>
+</footer>
+
