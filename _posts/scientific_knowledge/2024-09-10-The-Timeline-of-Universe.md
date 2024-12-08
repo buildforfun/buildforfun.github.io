@@ -17,8 +17,13 @@ Dust that moved around the Sun, 4.6 billion years ago formed the Earth. The Eart
 - 230 million years ago, Dinosaurs and Mammals emerge.
 - 201 million years ago, the super continent Pangea started breaking up.
 - 66 million years ago, a mass extinction likely caused by a large asteroid impact. The Earth's continents stops breaking up and the continents we know of today are formed.
+- 7 million years ago, the first hominins emerge, this is where hominins diverged from apes. The physical traists that make us distinct are we started walking on 2 legs and have small canine teeth. 
 
-7 million years ago, the first hominins emerge, this is where hominins diverged from apes. The physical traists that make us distinct are we started walking on 2 legs and have small canine teeth. Hominins formed opposing thumbs around 2 million years ago. About 300,000 years ago, the first Homo sapiens emerge in Africa! (that'us!) 100,000 years ago, Homo sapiens begin to migrate out of Africa. Hunter gathers operated, Humans started using fire, forming shelters and hunting with weapons.40,000 years ago, humans started forming advanced tools.
+- Hominins formed opposing thumbs around 2 million years ago. 
+
+- About 300,000 years ago, the first Homo sapiens emerge in Africa! (that'us!) 
+
+- 100,000 years ago, Homo sapiens begin to migrate out of Africa. Hunter gathers operated, Humans started using fire, forming shelters and hunting with weapons.40,000 years ago, humans started forming advanced tools.
 
 Approximately 10,000 years ago, Human civilization forms. Humans transition from hunter gatherer societies to settled agricultural communities. Around 5,000 years ago or 3000 BCE, the Bronze Age began. Widespread use of metal as tools and weapons and recorded history. This period marks the rise of ancient civilizations such as:
 - Mesopotamia

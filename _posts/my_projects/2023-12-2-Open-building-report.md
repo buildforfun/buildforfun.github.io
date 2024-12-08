@@ -1,7 +1,6 @@
 ---
 layout: post
 categories: [my_projects]
-permalink: /my_projects/
 title:  "Open building report"
 date:   2024-12-2 11:00:00
 ---

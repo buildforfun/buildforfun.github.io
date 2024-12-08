@@ -1,11 +1,20 @@
 ---
 layout: post
-title:  "How to learn"
+title:  "How to learn fast"
 categories: [ personal_development]
 date:   2024-11-23 13:01:00
 ---
 
 # How to learn
+
+## Planning what to learn and setting it up
+1. Have a clear objective - unambiguous goal - e.g. solve a Rubix cube under 2 mins. tell people if needed
+2. Keep it short - between 20-40 mins. Have a break.
+3. Break it down. Split what you are doing into discrete chunks then put it together.
+4. Drink water.
+5. Celebrate your success!!!! Any slither of improvement, feel good about it.
+
+## The learning session
 
 Obtained from Justin Sung vids.
 

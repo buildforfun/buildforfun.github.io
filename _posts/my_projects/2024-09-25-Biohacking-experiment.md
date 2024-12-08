@@ -1,7 +1,6 @@
 ---
 layout: post
 categories: [ my_projects]
-permalink: /my_projects/
 title:  "Biohacking experiment"
 date:   2024-09-25 11:00:00
 ---

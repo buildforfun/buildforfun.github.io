@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Having an Iron Clad mind"
+title:  "Having a stoic mind"
 categories: [ personal_development]
 date:   2024-11-24 13:01:00
 ---
