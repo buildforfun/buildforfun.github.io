@@ -14,7 +14,19 @@ layout: default
   </script>
 </head>
 
-<h2>My Projects posts</h2>
+<h2>Living Sustainably</h2>
+<div class="home">
+  <ul class="posts">
+    {% for post in site.categories.sustainability %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h2>My Fun Projects</h2>
 <div class="home">
   <ul class="posts">
     {% for post in site.categories.my_projects %}
@@ -26,7 +38,7 @@ layout: default
   </ul>
 </div>
 
-<h2>Programming posts</h2>
+<h2>Programming notes</h2>
 <div class="home">
   <ul class="posts">
     {% for post in site.categories.programming %}
@@ -38,17 +50,6 @@ layout: default
   </ul>
 </div>
 
-<h2>World scientific knowledge posts</h2>
-<div class="home">
-  <ul class="posts">
-    {% for post in site.categories.scientific_knowledge %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
 
 <h2>Navigating life posts</h2>
 <div class="home">
@@ -60,10 +61,6 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-</div>
-
-<h2>Favourites</h2>
-<div class="home">
   <ul class="posts">
     {% for post in site.categories.favourites %}
       <li>
@@ -73,6 +70,20 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+
+<h2>World knowledge posts</h2>
+<div class="home">
+  <ul class="posts">
+    {% for post in site.categories.scientific_knowledge %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
 
 <hr style="margin-top: 20px; margin-bottom: 20px;">
 
