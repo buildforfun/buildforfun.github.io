@@ -14,7 +14,7 @@ layout: default
   </script>
 </head>
 
-<h2>Living Sustainably</h2>
+<h2>Building Energy Modelling</h2>
 <div class="home">
   <ul class="posts">
     {% for post in site.categories.sustainability %}
@@ -26,19 +26,7 @@ layout: default
   </ul>
 </div>
 
-<h2>My Fun Projects</h2>
-<div class="home">
-  <ul class="posts">
-    {% for post in site.categories.my_projects %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<h2>Programming notes</h2>
+<h2>Coding</h2>
 <div class="home">
   <ul class="posts">
     {% for post in site.categories.programming %}
@@ -50,19 +38,10 @@ layout: default
   </ul>
 </div>
 
-
-<h2>Navigating life posts</h2>
+<h2>Pet Projects</h2>
 <div class="home">
   <ul class="posts">
-    {% for post in site.categories.personal_development %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  <ul class="posts">
-    {% for post in site.categories.favourites %}
+    {% for post in site.categories.my_projects %}
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -71,8 +50,7 @@ layout: default
   </ul>
 </div>
 
-
-<h2>World knowledge posts</h2>
+<h2>World History</h2>
 <div class="home">
   <ul class="posts">
     {% for post in site.categories.scientific_knowledge %}
@@ -84,16 +62,4 @@ layout: default
   </ul>
 </div>
 
-
-<hr style="margin-top: 20px; margin-bottom: 20px;">
-
-<footer class="site-footer" style="border-top: none;">
-  <div class="wrap">
-      <ul style="list-style-type: none;">
-          <a href="https://github.com/{{ site.github_username }}">
-            <span class="username">{{ site.github_username }} github repo</span>
-          </a>
-      </ul>
-  </div>
-</footer>
 
