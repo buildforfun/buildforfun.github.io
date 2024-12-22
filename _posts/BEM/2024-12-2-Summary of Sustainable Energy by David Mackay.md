@@ -147,3 +147,10 @@ The stuff
 
 ## Public services
 - Defence - 4 kWh/day
+
+
+# Production
+
+## Wind
+- power per person = wind power per unit area * area per person
+

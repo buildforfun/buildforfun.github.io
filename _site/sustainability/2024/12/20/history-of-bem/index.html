@@ -10,8 +10,8 @@
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="History of Building Energy Modelling" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="History of Building Energy Modelling" />
-<meta property="og:description" content="History of Building Energy Modelling" />
+<meta name="description" content="History of Building Energy Modelling Detailed Overview of Building Energy Simulation Models (1990s - 2000s)" />
+<meta property="og:description" content="History of Building Energy Modelling Detailed Overview of Building Energy Simulation Models (1990s - 2000s)" />
 <link rel="canonical" href="http://localhost:4000/sustainability/2024/12/20/history-of-bem/" />
 <meta property="og:url" content="http://localhost:4000/sustainability/2024/12/20/history-of-bem/" />
 <meta property="og:site_name" content="Buildforfun blog posts!" />
@@ -20,10 +20,10 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="History of Building Energy Modelling" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-20T07:00:00+00:00","datePublished":"2024-12-20T07:00:00+00:00","description":"History of Building Energy Modelling","headline":"History of Building Energy Modelling","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sustainability/2024/12/20/history-of-bem/"},"url":"http://localhost:4000/sustainability/2024/12/20/history-of-bem/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-20T07:00:00+00:00","datePublished":"2024-12-20T07:00:00+00:00","description":"History of Building Energy Modelling Detailed Overview of Building Energy Simulation Models (1990s - 2000s)","headline":"History of Building Energy Modelling","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sustainability/2024/12/20/history-of-bem/"},"url":"http://localhost:4000/sustainability/2024/12/20/history-of-bem/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=0de23c29c72a1a5b3ae2e1e4c47014b3f481a0b6">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7b09ff1ed0e81f1352fc26085593340c8575b540">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -43,43 +43,100 @@
       
 
       <h2 id="history-of-building-energy-modelling">History of Building Energy Modelling</h2>
+<h3 id="detailed-overview-of-building-energy-simulation-models-1990s---2000s">Detailed Overview of Building Energy Simulation Models (1990s - 2000s)</h3>
 
-<h3 id="early-developments-1960s---1980s">Early Developments (1960s - 1980s)</h3>
-
+<h3 id="1-energyplus">1. EnergyPlus</h3>
 <ul>
-  <li><strong>Initial Models</strong>:
+  <li><strong>Overview</strong>: Developed by the U.S. Department of Energy, EnergyPlus is a comprehensive energy simulation program designed for modeling heating, cooling, lighting, ventilation, and other energy flows in buildings.</li>
+  <li><strong>Core Functionality</strong>:
     <ul>
-      <li>The origins of building energy modeling date back to the 1960s with the emergence of early computer-based models.</li>
-      <li>These models primarily focused on energy assessments and heating/cooling load calculations.</li>
-      <li>Notable early simulation engines included <strong>BLAST</strong> and <strong>DOE-2</strong>, which established foundational principles for future developments.</li>
+      <li>Utilizes a heat balance method to calculate energy loads and consumption.</li>
+      <li>Allows for dynamic thermal simulation with time steps of less than one hour, enabling detailed analysis of building performance.</li>
+      <li>Supports modular systems and plant integration, facilitating complex HVAC modeling.</li>
+      <li>Features include:
+        <ul>
+          <li>Assessment of passive performance and thermal mass.</li>
+          <li>Calculation of solar gains, surface temperatures, and radiant exchanges.</li>
+          <li>Reporting capabilities for energy consumption, carbon emissions, and room comfort at various intervals (annual, monthly, daily, hourly).</li>
+          <li>Ability to export data for detailed Computational Fluid Dynamics (CFD) analysis.</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><strong>Energy Crisis Impact</strong>:
+  <li><strong>Integration</strong>: Often used in conjunction with user-friendly interfaces like DesignBuilder to simplify model creation and simulation execution.</li>
+</ul>
+
+<h3 id="2-equest">2. eQUEST</h3>
+<ul>
+  <li><strong>Overview</strong>: eQUEST is a free software tool that combines sophisticated building energy simulation capabilities with an intuitive interface designed for ease of use across all design phases.</li>
+  <li><strong>Core Functionality</strong>:
     <ul>
-      <li>The energy crisis of the 1970s (petrol shortages) heightened the urgency to reduce building energy consumption.</li>
-      <li>This period led to the establishment of building energy standards and regulations.</li>
-      <li>A systematic approach to modeling energy use in buildings emerged, emphasizing efficiency improvements.</li>
+      <li>Built on an advanced version of the DOE-2 engine, providing reliable energy use estimates.</li>
+      <li>Features a building creation wizard and an Energy Efficiency Measure (EEM) wizard to guide users through model setup and analysis.</li>
+      <li>Capable of performing parametric simulations to evaluate various design alternatives quickly.</li>
+      <li>Generates graphical results that highlight energy use patterns and efficiency measures.</li>
+    </ul>
+  </li>
+  <li><strong>Applications</strong>: Suitable for both schematic design and detailed analysis phases, allowing users to assess the impact of new technologies on building performance.</li>
+</ul>
+
+<h3 id="3-trnsys">3. TRNSYS</h3>
+<ul>
+  <li><strong>Overview</strong>: TRNSYS (Transient System Simulation Tool) is a flexible software environment used to simulate the behavior of transient systems across various applications beyond just building energy analysis.</li>
+  <li><strong>Core Functionality</strong>:
+    <ul>
+      <li>Comprises a kernel that processes input files and iteratively solves system equations to determine convergence.</li>
+      <li>Includes an extensive library of approximately 150 components for modeling different parts of a system (e.g., pumps, HVAC equipment).</li>
+      <li>Allows users to create custom components or modify existing ones, enhancing simulation capabilities.</li>
+      <li>Applications extend to central plant modeling, solar thermal processes, geothermal systems, and more.</li>
+    </ul>
+  </li>
+  <li><strong>Strengths</strong>: Known for its versatility in simulating complex interactions within buildings and systems over time.</li>
+</ul>
+
+<h3 id="4-designbuilder">4. DesignBuilder</h3>
+<ul>
+  <li><strong>Overview</strong>: DesignBuilder provides a user-friendly interface that integrates tightly with EnergyPlus for detailed building energy modeling while maintaining accessibility for users with varying expertise levels.</li>
+  <li><strong>Core Functionality</strong>:
+    <ul>
+      <li>Facilitates the generation of IDF files compatible with EnergyPlus for advanced simulations.</li>
+      <li>Offers a graphical interface that simplifies the definition of building geometry and systems.</li>
+      <li>Provides access to databases of building materials, constructions, and glazing options to streamline model setup.</li>
+    </ul>
+  </li>
+  <li><strong>Features</strong>: Users can conduct simulations without extensive knowledge of EnergyPlus’s underlying complexities while benefiting from its powerful simulation capabilities.</li>
+</ul>
+
+<h3 id="5-openstudio">5. OpenStudio</h3>
+<ul>
+  <li><strong>Overview</strong>: OpenStudio is an open-source platform developed by NREL that supports parametric modeling and integration with EnergyPlus.</li>
+  <li><strong>Core Functionality</strong>:
+    <ul>
+      <li>Offers a graphical user interface via a SketchUp plugin for easy model creation and editing.</li>
+      <li>Supports scripting through Ruby for customization and advanced functionality.</li>
+      <li>Facilitates collaboration by allowing users to share models across different tools within the OpenStudio ecosystem.</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="advancements-in-simulation-software-1990s---2000s">Advancements in Simulation Software (1990s - 2000s)</h3>
-
+<h3 id="6-iesve-integrated-environmental-solutions-virtual-environment">6. IESVE (Integrated Environmental Solutions Virtual Environment)</h3>
 <ul>
-  <li><strong>Emergence of Building Energy Simulation Software</strong>:
+  <li><strong>Overview</strong>: IESVE is a comprehensive suite designed for detailed building energy modeling and optimization across various performance aspects.</li>
+  <li><strong>Core Functionality</strong>:
     <ul>
-      <li>The 1990s witnessed the development of advanced simulation software such as:
-        <ul>
-          <li><strong>EnergyPlus</strong>: A robust engine developed by the U.S. Department of Energy for detailed thermal and energy analysis.</li>
-          <li><strong>eQUEST</strong>: A widely used free software for detailed building energy analysis, including lifecycle cost analysis.</li>
-          <li><strong>TRNSYS</strong>: A versatile tool for transient thermal and energy performance analysis in buildings.</li>
-          <li><strong>DesignBuilder</strong>: A user-friendly software that combines powerful simulation capabilities with intuitive design tools.</li>
-          <li><strong>OpenStudio</strong>: An open-source platform developed by NREL that supports parametric modeling and integration with other tools.</li>
-          <li><strong>IESVE (Integrated Environmental Solutions Virtual Environment)</strong>: A comprehensive suite designed for detailed building energy modeling and optimization.</li>
-          <li><strong>Autodesk Insight</strong>: A cloud-based tool that integrates with Autodesk Revit for advanced energy analysis.</li>
-          <li><strong>EnergyPlus+IDA (Integrated Design Assistant)</strong>: Combines EnergyPlus with optimization tools for comprehensive performance assessment.</li>
-        </ul>
-      </li>
+      <li>Provides tools for daylighting analysis, thermal comfort assessment, and whole-building performance evaluations.</li>
+      <li>Integrates seamlessly with other IES software modules to enhance overall design efficiency.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="7-autodesk-insight">7. Autodesk Insight</h3>
+<ul>
+  <li><strong>Overview</strong>: Autodesk Insight is a cloud-based tool that integrates with Autodesk Revit for advanced energy analysis during the design process.</li>
+  <li><strong>Core Functionality</strong>:
+    <ul>
+      <li>Enables early-stage design decisions by evaluating energy performance alongside architectural considerations.</li>
+      <li>Provides insights into building performance metrics such as energy consumption and carbon footprint.</li>
     </ul>
   </li>
   <li><strong>Integration into Design Processes</strong>:
@@ -90,24 +147,69 @@
   </li>
 </ul>
 
-<h3 id="regulatory-changes-and-standardization-2000s---present">Regulatory Changes and Standardization (2000s - Present)</h3>
+<h2 id="regulatory-changes-and-standardization-2000s---present">Regulatory Changes and Standardization (2000s - Present)</h2>
 
+<h3 id="standard-assessment-procedure-sap">Standard Assessment Procedure (SAP)</h3>
 <ul>
-  <li><strong>Standard Assessment Procedure (SAP)</strong>:
+  <li>
+    <p><strong>Overview</strong>: The Standard Assessment Procedure (SAP) was introduced in the UK in 1993 as a standardized method for assessing the energy performance of domestic buildings. It was developed by the Building Research Establishment (BRE) based on the BRE Domestic Energy Model (BREDEM).</p>
+  </li>
+  <li><strong>Historical Context</strong>:
     <ul>
-      <li>Introduced in the UK in 1993, SAP provided a standardized method for assessing domestic building energy performance.</li>
-      <li>This procedure has undergone multiple revisions to enhance accuracy and adapt to evolving energy efficiency regulations.</li>
+      <li><strong>1994</strong>: SAP was officially referenced in the UK Building Regulations, solidifying its role in evaluating residential energy performance.</li>
+      <li><strong>2007</strong>: SAP became the underlying methodology for Energy Performance Certificates (EPCs), which provide essential information about a property’s energy efficiency and environmental impact.</li>
+      <li><strong>2005</strong>: The Reduced Data SAP (RdSAP) was introduced to simplify assessments for existing dwellings, allowing assessors to use predefined assumptions, thus reducing data collection requirements.</li>
     </ul>
   </li>
-  <li><strong>Building Performance Evaluation</strong>:
+  <li><strong>Revisions and Updates</strong>:
     <ul>
-      <li>The late 2000s marked an increased emphasis on performance-based building codes requiring compliance with specific energy performance standards.</li>
-      <li>Energy modeling became essential for demonstrating compliance with these codes and obtaining certifications like <strong>BREEAM</strong> and <strong>LEED</strong>.</li>
+      <li>SAP has undergone multiple revisions to enhance accuracy and adapt to evolving energy efficiency regulations, with significant updates in <strong>1998</strong>, <strong>2001</strong>, <strong>2005</strong>, <strong>2009</strong>, <strong>2012</strong>, and most recently in <strong>2022</strong>.</li>
+      <li>Each revision has aimed to incorporate advancements in technology, construction practices, and changes in environmental policy.</li>
+    </ul>
+  </li>
+  <li><strong>Current Developments</strong>:
+    <ul>
+      <li>The UK government is currently developing an enhanced methodology known as the Home Energy Model, aimed at improving accuracy, resilience, and alignment with net zero emissions goals. A consultation was released in December 2023 to gather feedback from stakeholders, with plans for integration into the Future Homes Standard by 2025.</li>
+    </ul>
+  </li>
+  <li><strong>Impact on Homeowners</strong>:
+    <ul>
+      <li>Compliance with SAP assessments is mandatory for new homeowners. Understanding these requirements is crucial for those involved in building or renovating homes.</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="recent-trends-and-future-directions-2010s---present">Recent Trends and Future Directions (2010s - Present)</h3>
+<h3 id="building-performance-evaluation-bpe">Building Performance Evaluation (BPE)</h3>
+<ul>
+  <li>
+    <p><strong>Overview</strong>: The late 2000s saw a growing emphasis on performance-based building codes that require compliance with specific energy performance standards. Building Performance Evaluation (BPE) has become essential for demonstrating compliance with these codes.</p>
+  </li>
+  <li><strong>Definition and Purpose</strong>:
+    <ul>
+      <li>BPE involves assessing a building’s technical performance regarding energy flows, heat transfer, moisture management, and carbon emissions. It helps identify discrepancies between predicted and actual performance.</li>
+      <li>It provides insights into how buildings operate under real-world conditions, enabling better adaptation measures to improve resilience against climate change.</li>
+    </ul>
+  </li>
+  <li><strong>Key Standards and Methodologies</strong>:
+    <ul>
+      <li>In 2021, the British Standards Institute launched BS 40101:2021, which was updated in 2022. This standard provides guidance on evaluating building performance based on data gathered from tests, measurements, observations, and user experiences.</li>
+      <li>BPE is considered a form of Post-Occupancy Evaluation (POE) that can be conducted at any point during a building’s lifecycle.</li>
+    </ul>
+  </li>
+  <li><strong>Importance of Energy Modeling</strong>:
+    <ul>
+      <li>Energy modeling has become integral to BPE as it allows designers and builders to estimate anticipated energy consumption based on various design parameters.</li>
+      <li>Compliance modeling predicts a building’s energy use against hypothetical baseline models established by codes like IECC and ASHRAE Standard 90.1. This approach enables flexibility in meeting performance specifications while ensuring adherence to regulatory standards.</li>
+    </ul>
+  </li>
+  <li><strong>Challenges and Future Directions</strong>:
+    <ul>
+      <li>There are challenges associated with discrepancies between predicted and actual energy use due to reliance on standardized assumptions during compliance modeling. This gap can lead to non-compliance with</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="recent-trends-and-future-directions-2010s---present">Recent Trends and Future Directions (2010s - Present)</h2>
 
 <ul>
   <li><strong>Whole-Building Life Cycle Assessment</strong>:
