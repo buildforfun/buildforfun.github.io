@@ -28,7 +28,7 @@ Who has responsibiltty? Countries with higher than average emissions. The pollut
 | Electronics | Wave |
 | Food | Tide |
 | Manufacturing | Geothermal |
-|| Nuclear|
+| Public services | Nuclear|
 
 Notes (Sept 2024)
 - Wind currently approx 30% for UK grid
@@ -37,10 +37,39 @@ Notes (Sept 2024)
 - Hydro 1% for UK grid
 - Nuclear 10% for UK grid
 
-Notes:
+
 - Heating and cooling - 30%
 - Transport - 40%
 - Lighting - 3%
+
+## Transport
+### Cars
+energy used per day = (distance travelled per day / distance per unit of fuel) * energy per unit of fuel
+
+distance travelled per day = 50 km
+distance per unit of fuel = 33 miles per gallon = approx 12 km per litre
+energy per unit of fuel = 
+- lateral thinking!:
+  - petrol is hydrocarbons
+  - hydrocarbons can be found in butter
+  - butter is 8 kwh per kg
+  - less than water since it floats so say 80% of water
+  - 7kWh per litre 
+in reality it's about 10 kwh per litre.
+
+energy used per day = (distance travelled per day / distance per unit of fuel) * energy per unit of fuel
+= ( 50 / 12 ) * 10 = 40 kWh/day
+
+### Planes
+A boeing 747:
+- capacity: 416 people
+- fuel: 240,000 L
+- distance (london to cape town) = 14,200 km (round trip)
+
+(2 * 240,000 / 416 )*10 = 12,000 kwh per passenger per year
+12000 / 365 = 33 kwh/day
+
+
 
 ## Heating and cooling
 
@@ -78,3 +107,43 @@ Reduce energy consumption
   - smaller house!
 - Increasing COP
   - heat pumps
+
+## Light
+- brightest domestic light bulbs about 250W
+- home: 2.7 kWh per day
+- work: 1.3 kWh per day
+- total 4 kWh/day
+
+## Gadgets
+- vacuum cleaner: 0.2 kWh/day
+- lawn mowers: 0.6 kWh/day
+- others
+- total = 5kWh/day
+
+## Food and farming
+- avg person with 2600 calories
+- 2600 calories is approx 3 kWh
+- milk
+- eggs
+- meat
+
+## Creating Stuff
+- Raw materials phase
+- Production into manufacturered product phase
+- Use case phase
+- Disposal phase
+  - recycling (back into raw materials)
+  - landfill (put it into a hole)
+
+The stuff
+- coke cans
+- other packaging
+- computers
+- batteries
+- newspaper
+- house
+- car
+- Transporting by road, water
+
+## Public services
+- Defence - 4 kWh/day

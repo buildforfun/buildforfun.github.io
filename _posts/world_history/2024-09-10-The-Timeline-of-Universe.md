@@ -21,7 +21,7 @@ Dust that moved around the Sun, 4.6 billion years ago formed the Earth. The Eart
 
 - Hominins formed opposing thumbs around 2 million years ago. 
 
-- About 300,000 years ago, the first Homo sapiens emerge in Africa! (that'us!) 
+- About 300,000 years ago, the first Homo sapiens emerge in Africa! (that's us!) 
 
 - 100,000 years ago, Homo sapiens begin to migrate out of Africa. Hunter gathers operated, Humans started using fire, forming shelters and hunting with weapons.40,000 years ago, humans started forming advanced tools.
 
@@ -35,12 +35,19 @@ Approximately 10,000 years ago, Human civilization forms. Humans transition from
 - Ancient Peru
 
 The main sections of time can be split into:
-- Early bronze age
-- Bronze age
-- Iron age
-- Classical antiquity
-- Middle ages
-- Modern period
+- Early Bronze Age: 3300 - 2100 BCE
+- Bronze Age: 3300 - 1200 BCE
+- Iron Age: 1200 - 600 BCE
+- Classical Antiquity: 800 BCE - 476 CE
+- Middle Ages: 476 - 1453 CE
+- Modern Period: 1453 CE - Present
+
+Modern Period
+----
+- Political Revolutions: The French Revolution (1789) and subsequent revolutions that spread ideas of democracy and nationalism.
+- Industrial Revolution: A period of significant industrial growth that transformed economies from agrarian to industrial, impacting social structures and urbanization.
+- Enlightenment: An intellectual movement emphasizing reason, individualism, and skepticism of traditional authority.
+- Globalization: The increasing interconnectedness of economies, cultures, and populations through trade, migration, and communication.
 
 Lots of civilisations formed and ended from 5000 years ago to the present moment. We are going to skip them for now. We will come back to this another time. Instead, I want to skip ahead to the the Modern period where the scientific revolution happened around 1500 AD. The development of modern science, philosophy, and political thought, laid the foundations for the Industrial Revolution and the rise of nation-states. The Industrial Revolution ran from 1760 to 1840 AD. Where there was a transition from an agrarian to an industrial society, driven by technological innovations and the harnessing of new energy sources.
 
