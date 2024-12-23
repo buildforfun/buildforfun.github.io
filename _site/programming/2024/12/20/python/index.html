@@ -10,8 +10,8 @@
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="My Python notes" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Build for fun blog." />
-<meta property="og:description" content="Build for fun blog." />
+<meta name="description" content="My Python Notes" />
+<meta property="og:description" content="My Python Notes" />
 <link rel="canonical" href="http://localhost:4000/programming/2024/12/20/python/" />
 <meta property="og:url" content="http://localhost:4000/programming/2024/12/20/python/" />
 <meta property="og:site_name" content="Buildforfun blog posts!" />
@@ -20,10 +20,10 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="My Python notes" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-20T08:00:00+00:00","datePublished":"2024-12-20T08:00:00+00:00","description":"Build for fun blog.","headline":"My Python notes","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2024/12/20/python/"},"url":"http://localhost:4000/programming/2024/12/20/python/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-20T08:00:00+00:00","datePublished":"2024-12-20T08:00:00+00:00","description":"My Python Notes","headline":"My Python notes","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2024/12/20/python/"},"url":"http://localhost:4000/programming/2024/12/20/python/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=7b09ff1ed0e81f1352fc26085593340c8575b540">
+    <link rel="stylesheet" href="/assets/css/style.css?v=171938651d9f09606171ad7548e9cf33592a1c0a">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -42,7 +42,184 @@
       <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
       
 
-      
+      <h1 id="my-python-notes">My Python Notes</h1>
+
+<h2 id="overview-of-python">Overview of Python</h2>
+
+<p>Python is a high-level, interpreted programming language created by Guido van Rossum and released in 1991. It is known for its simplicity and readability, making it an excellent choice for beginners and experienced developers alike. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+
+<h3 id="key-features-of-python">Key Features of Python</h3>
+
+<ul>
+  <li><strong>Interpreted Language</strong>: Python code is executed line by line, which allows for quick testing and debugging.</li>
+  <li><strong>Dynamic Typing</strong>: Variable types are determined at runtime, which provides flexibility in coding.</li>
+  <li><strong>Rich Standard Library</strong>: Python has a vast collection of modules and packages that facilitate various tasks.</li>
+  <li><strong>Cross-Platform Compatibility</strong>: Python runs on various operating systems, including Windows, Mac, and Linux.</li>
+</ul>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<p>Python syntax is designed to be readable and straightforward. Here are some fundamental aspects:</p>
+
+<h3 id="structure-of-a-python-program">Structure of a Python Program</h3>
+
+<p>A simple Python program can be written as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello, World!")
+</code></pre></div></div>
+
+<h3 id="comments">Comments</h3>
+
+<ul>
+  <li><strong>Single-Line Comments</strong>: Start with <code class="language-plaintext highlighter-rouge">#</code> and continue to the end of the line.</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is a single-line comment
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Multi-Line Comments</strong>: Enclosed in triple quotes (<code class="language-plaintext highlighter-rouge">"""</code> or <code class="language-plaintext highlighter-rouge">'''</code>).</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"""
+This is a 
+multi-line comment
+"""
+</code></pre></div></div>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Python uses indentation to define code blocks instead of braces or keywords. Consistent indentation is crucial as it determines the structure of the code.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if True:
+    print("This is indented")
+</code></pre></div></div>
+
+<h3 id="blank-lines">Blank Lines</h3>
+
+<p>Blank lines are ignored by the interpreter and can be used to separate code sections for better readability.</p>
+
+<h2 id="data-types">Data Types</h2>
+
+<p>Python has several built-in data types that can be categorized as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Text Type</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">str</code> (string)</td>
+    </tr>
+    <tr>
+      <td><strong>Numeric Types</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code> (integer), <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">complex</code></td>
+    </tr>
+    <tr>
+      <td><strong>Sequence Types</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">list</code>, <code class="language-plaintext highlighter-rouge">tuple</code>, <code class="language-plaintext highlighter-rouge">range</code></td>
+    </tr>
+    <tr>
+      <td><strong>Mapping Type</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">dict</code> (dictionary)</td>
+    </tr>
+    <tr>
+      <td><strong>Set Types</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">set</code>, <code class="language-plaintext highlighter-rouge">frozenset</code></td>
+    </tr>
+    <tr>
+      <td><strong>Boolean Type</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code> (True or False)</td>
+    </tr>
+    <tr>
+      <td><strong>Binary Types</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">bytes</code>, <code class="language-plaintext highlighter-rouge">bytearray</code>, <code class="language-plaintext highlighter-rouge">memoryview</code></td>
+    </tr>
+    <tr>
+      <td><strong>None Type</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">NoneType</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="getting-the-data-type">Getting the Data Type</h3>
+
+<p>You can determine the type of a variable using the <code class="language-plaintext highlighter-rouge">type()</code> function:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = 5
+print(type(x))  # Output: &lt;class 'int'&gt;
+</code></pre></div></div>
+
+<h3 id="setting-data-types">Setting Data Types</h3>
+
+<p>In Python, the data type is assigned when you assign a value to a variable:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = "Hello World"  # str
+y = 20             # int
+z = 20.5           # float
+</code></pre></div></div>
+
+<h2 id="control-flow-statements">Control Flow Statements</h2>
+
+<p>Python supports various control flow statements that allow you to dictate the order in which code executes.</p>
+
+<h3 id="conditional-statements">Conditional Statements</h3>
+
+<p>Conditional statements allow you to execute code based on certain conditions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if condition:
+    # code block executed if condition is true
+elif another_condition:
+    # code block executed if another_condition is true
+else:
+    # code block executed if all conditions are false
+</code></pre></div></div>
+
+<h3 id="loops">Loops</h3>
+
+<p>Python provides two primary types of loops:</p>
+
+<ol>
+  <li><strong>For Loop</strong>: Iterates over a sequence (like a list or string).</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in range(5):
+    print(i)  # Outputs numbers from 0 to 4
+</code></pre></div></div>
+
+<ol>
+  <li><strong>While Loop</strong>: Continues execution as long as a condition is true.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while condition:
+    # code block executed while condition is true
+</code></pre></div></div>
+
+<h2 id="functions">Functions</h2>
+
+<p>Functions are reusable pieces of code that perform specific tasks. You can define a function using the <code class="language-plaintext highlighter-rouge">def</code> keyword.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def my_function(param1, param2):
+    return param1 + param2
+</code></pre></div></div>
+
+<h3 id="calling-functions">Calling Functions</h3>
+
+<p>You can call a function by using its name followed by parentheses:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>result = my_function(5, 10)
+print(result)  # Output: 15
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Python’s simplicity and versatility make it an excellent choice for various applications, from web development to data analysis. Understanding its syntax, data types, control flow structures, and functions will provide a solid foundation for further exploration into more advanced topics in Python programming.</p>
 
 
       

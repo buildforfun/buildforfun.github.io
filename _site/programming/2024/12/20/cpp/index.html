@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>My C++ notes | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="My C++ notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My C++ notes" />
+<meta property="og:description" content="My C++ notes" />
+<link rel="canonical" href="http://localhost:4000/programming/2024/12/20/cpp/" />
+<meta property="og:url" content="http://localhost:4000/programming/2024/12/20/cpp/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-20T08:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="My C++ notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-12-20T08:00:00+00:00","datePublished":"2024-12-20T08:00:00+00:00","description":"My C++ notes","headline":"My C++ notes","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2024/12/20/cpp/"},"url":"http://localhost:4000/programming/2024/12/20/cpp/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=171938651d9f09606171ad7548e9cf33592a1c0a">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="my-c-notes">My C++ notes</h1>
+
+<p>C++ is a statically typed, compiled, general-purpose programming language that supports multiple programming paradigms, including procedural, object-oriented, and generic programming. It is widely used for system/software development, game development, and performance-critical applications.</p>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<p>A C++ program is essentially a collection of objects that communicate by invoking each other’s methods. The fundamental components of a C++ program include:</p>
+
+<ul>
+  <li><strong>Classes</strong>: Blueprints for creating objects that encapsulate data and functions.</li>
+  <li><strong>Objects</strong>: Instances of classes that hold states (attributes) and behaviors (methods).</li>
+  <li><strong>Methods</strong>: Functions defined within a class that operate on the data contained in the object.</li>
+  <li><strong>Instance Variables</strong>: Unique variables for each object that define its state.</li>
+</ul>
+
+<h3 id="structure-of-a-c-program">Structure of a C++ Program</h3>
+
+<p>A basic C++ program structure can be illustrated with the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello World"; // prints Hello World
+    return 0;
+}
+</code></pre></div></div>
+
+<p><strong>Explanation of Components</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">#include &lt;iostream&gt;</code>: Includes the standard input-output stream library.</li>
+  <li><code class="language-plaintext highlighter-rouge">using namespace std;</code>: Allows the use of standard library features without prefixing them with <code class="language-plaintext highlighter-rouge">std::</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">int main()</code>: The entry point of every C++ program.</li>
+  <li><code class="language-plaintext highlighter-rouge">cout &lt;&lt; "Hello World";</code>: Outputs “Hello World” to the console.</li>
+  <li><code class="language-plaintext highlighter-rouge">return 0;</code>: Indicates successful completion of the program.</li>
+</ul>
+
+<h2 id="comments-in-c">Comments in C++</h2>
+
+<p>C++ supports two types of comments:</p>
+<ul>
+  <li><strong>Single-line comments</strong>: Start with <code class="language-plaintext highlighter-rouge">//</code> and continue until the end of the line.</li>
+  <li><strong>Multi-line comments</strong>: Enclosed between <code class="language-plaintext highlighter-rouge">/*</code> and <code class="language-plaintext highlighter-rouge">*/</code>.</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// This is a single-line comment
+/* This is a 
+   multi-line comment */
+</code></pre></div></div>
+
+<h2 id="data-types">Data Types</h2>
+
+<p>C++ provides a rich set of built-in data types, which can be categorized as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Keyword</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boolean</td>
+      <td>bool</td>
+    </tr>
+    <tr>
+      <td>Character</td>
+      <td>char</td>
+    </tr>
+    <tr>
+      <td>Integer</td>
+      <td>int</td>
+    </tr>
+    <tr>
+      <td>Floating Point</td>
+      <td>float</td>
+    </tr>
+    <tr>
+      <td>Double Floating Point</td>
+      <td>double</td>
+    </tr>
+    <tr>
+      <td>Valueless</td>
+      <td>void</td>
+    </tr>
+    <tr>
+      <td>Wide Character</td>
+      <td>wchar_t</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Modifiers such as <code class="language-plaintext highlighter-rouge">signed</code>, <code class="language-plaintext highlighter-rouge">unsigned</code>, <code class="language-plaintext highlighter-rouge">short</code>, and <code class="language-plaintext highlighter-rouge">long</code> can further refine these types.</p>
+
+<h2 id="object-oriented-programming-concepts">Object-Oriented Programming Concepts</h2>
+
+<p>C++ is known for its support of object-oriented programming (OOP), which includes several key concepts:</p>
+
+<ol>
+  <li><strong>Data Abstraction</strong>: Hiding complex implementation details while exposing essential features.</li>
+  <li><strong>Encapsulation</strong>: Bundling data and methods that operate on that data within one unit (class).</li>
+  <li><strong>Inheritance</strong>: Mechanism where one class can inherit properties from another, promoting code reusability.</li>
+  <li><strong>Polymorphism</strong>: The ability to present the same interface for different underlying data types.</li>
+</ol>
+
+<h2 id="inputoutput-operations">Input/Output Operations</h2>
+
+<p>C++ uses streams for input and output operations:</p>
+<ul>
+  <li><strong>Output</strong>: The <code class="language-plaintext highlighter-rouge">cout</code> object is used to display output to the console. The insertion operator (<code class="language-plaintext highlighter-rouge">&lt;&lt;</code>) directs data to the output stream.</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int sum = 10;
+cout &lt;&lt; "Sum = " &lt;&lt; sum &lt;&lt; endl;
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Input</strong>: The <code class="language-plaintext highlighter-rouge">cin</code> object reads input from the user. The extraction operator (<code class="language-plaintext highlighter-rouge">&gt;&gt;</code>) retrieves data from the input stream.</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int number;
+cin &gt;&gt; number; // Waits for user input
+</code></pre></div></div>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
