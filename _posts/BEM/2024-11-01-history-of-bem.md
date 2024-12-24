@@ -2,7 +2,7 @@
 layout: post
 categories: [ sustainability]
 title:  "History of Building Energy Modelling"
-date:   2024-12-20 07:00:00
+date:   2024-11-01 07:00:00
 ---
 
 ## History of Building Energy Modelling

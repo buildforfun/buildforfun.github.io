@@ -2,7 +2,7 @@
 layout: post
 categories: [ sustainability]
 title:  "How to validate a BEM?"
-date:   2024-12-22 09:00:00
+date:   2024-11-03 09:00:00
 ---
 
 
