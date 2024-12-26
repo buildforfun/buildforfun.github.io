@@ -1,8 +1,8 @@
 ---
 layout: post
-categories: [ scientific_knowledge]
+categories: [ sustainability]
 title:  "History of sustainability"
-date:   2024-12-23 04:00:00
+date:   2024-10-12 04:00:00
 ---
 
 # Comprehensive History of Sustainability

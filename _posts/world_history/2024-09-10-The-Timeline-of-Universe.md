@@ -23,13 +23,13 @@ Dust that moved around the Sun, 4.6 billion years ago formed the Earth. The Eart
 - 100,000 years ago, Homo sapiens begin to migrate out of Africa. Hunter gathers operated, Humans started using fire, forming shelters and hunting with weapons.40,000 years ago, humans started forming advanced tools.
 
 Approximately 10,000 years ago, Human civilization forms. Humans transition from hunter gatherer societies to settled agricultural communities. Around 5,000 years ago or 3000 BCE, the Bronze Age began. Widespread use of metal as tools and weapons and recorded history. This period marks the rise of ancient civilizations such as:
-- Mesopotamia
-- Indus Valley
-- Ancient Egyptions
-- Ancient China
-- Ancient Greece
-- Ancient Rome
-- Ancient Peru
+  - **Mesopotamia**: Often regarded as the cradle of civilization with advances in writing (cuneiform) and law.
+  - **Indus Valley**: Known for its urban planning and sophisticated drainage systems.
+  - **Ancient Egypt**: Famous for its monumental architecture like pyramids and advancements in mathematics.
+  - **Ancient China**: Early dynasties developed writing systems and complex societal structures.
+  - **Ancient Greece**: Known for its contributions to philosophy, democracy, and arts.
+  - **Ancient Rome**: Expanded into a vast empire known for engineering feats like aqueducts.
+  - **Ancient Peru**: Home to early cultures such as the Moche and Nazca that developed advanced agricultural techniques.
 
 The main sections of time can be split into:
 - Early Bronze Age: 3300 - 2100 BCE
