@@ -2,7 +2,7 @@
 layout: post
 categories: [ sustainability]
 title:  "Summary of Sustainable Energy by David Mackay"
-date:   2024-12-2 08:00:00
+date:   2024-10-13 08:00:00
 ---
 
 # Summary of Sustainable Energy by David Mackay

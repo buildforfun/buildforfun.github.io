@@ -2,7 +2,7 @@
 layout: post
 categories: [ sustainability]
 title:  "Make UK net zero"
-date:   2024-12-26 05:00:00
+date:   2024-10-12 05:00:00
 ---
 
 Achieving net zero for the entire housing stock in the UK is a monumental task that requires a comprehensive and multifaceted approach. Here are key strategies and recommendations based on the search results:

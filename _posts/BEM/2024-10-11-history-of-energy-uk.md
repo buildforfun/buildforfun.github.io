@@ -2,7 +2,7 @@
 layout: post
 categories: [ sustainability]
 title:  "History of Energy in UK"
-date:   2024-12-23 04:00:00
+date:   2024-10-11 04:00:00
 ---
 
 # Comprehensive History of Energy in the UK
