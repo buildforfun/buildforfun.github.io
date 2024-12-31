@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How Energy plus works | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How Energy plus works" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Energy plus" />
+<meta property="og:description" content="Energy plus" />
+<link rel="canonical" href="http://localhost:4000/sustainability/2024/11/15/energy_plus/" />
+<meta property="og:url" content="http://localhost:4000/sustainability/2024/11/15/energy_plus/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-15T09:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Energy plus works" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-15T09:00:00+00:00","datePublished":"2024-11-15T09:00:00+00:00","description":"Energy plus","headline":"How Energy plus works","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sustainability/2024/11/15/energy_plus/"},"url":"http://localhost:4000/sustainability/2024/11/15/energy_plus/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=ae4388b2e0a7bdeaa02b0bcb2564574a71617167">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="energy-plus">Energy plus</h1>
+
+<h2 id="what-is-energyplus">What is EnergyPlus?</h2>
+
+<p>EnergyPlus is an open-source software tool developed by the U.S. Department of Energy (DOE) for simulating energy flows in buildings. It allows engineers, architects, and researchers to model energy consumption and performance, including heating, cooling, ventilation, lighting, and water use. First released in 2001 as a successor to earlier simulation tools like BLAST and DOE-2, EnergyPlus has evolved to include advanced modeling capabilities.</p>
+
+<p>Command:
+energyplus -r -d <output_directory> -w <weather_file.epw> <input_file.idf></input_file.idf></weather_file.epw></output_directory></p>
+
+<h2 id="key-features">Key Features</h2>
+
+<ol>
+  <li><strong>Integrated Simulation</strong>:
+    <ul>
+      <li>Simultaneously solves thermal zone conditions and HVAC system responses without assuming that HVAC systems can meet all zone loads, allowing for the simulation of both conditioned and unconditioned spaces.</li>
+    </ul>
+  </li>
+  <li><strong>Heat Balance Method</strong>:
+    <ul>
+      <li>Employs a heat balance method to calculate radiant and convective effects, producing surface temperatures and assessing thermal comfort.</li>
+    </ul>
+  </li>
+  <li><strong>Dynamic Time Steps</strong>:
+    <ul>
+      <li>Allows users to define sub-hourly time steps for interactions between thermal zones and the environment for precise modeling of systems with fast dynamics.</li>
+    </ul>
+  </li>
+  <li><strong>Advanced Fenestration Models</strong>:
+    <ul>
+      <li>Includes sophisticated models for windows that account for controllable blinds and electrochromic glazing, enabling detailed calculations of solar energy absorption.</li>
+    </ul>
+  </li>
+  <li><strong>Component-Based HVAC Systems</strong>:
+    <ul>
+      <li>Supports a wide range of HVAC configurations, allowing effective modeling of both standard and novel systems.</li>
+    </ul>
+  </li>
+  <li><strong>Daylighting Analysis</strong>:
+    <ul>
+      <li>Models lighting control systems using photoelectric sensors to calculate savings in electric lighting based on daylight availability.</li>
+    </ul>
+  </li>
+  <li><strong>Thermal Comfort Metrics</strong>:
+    <ul>
+      <li>Calculates various thermal comfort metrics, including internal air temperatures, mean radiant temperatures, operative temperatures, and humidity levels.</li>
+    </ul>
+  </li>
+  <li><strong>Multizone Airflow Modeling</strong>:
+    <ul>
+      <li>Simulates airflow between multiple zones within a building, accounting for natural ventilation and mechanical systems.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="input-and-output-structure">Input and Output Structure</h2>
+
+<ul>
+  <li><strong>Input Files</strong>: Uses text-based input files (IDF format) where users define building geometry, materials, internal loads, HVAC systems, and environmental conditions.</li>
+  <li><strong>Weather Files</strong>: Requires weather data in EPW format to simulate real operating conditions accurately.</li>
+  <li><strong>Output Files</strong>: Generates various output files (e.g., eplusout.eso) containing results like energy consumption data, temperature distributions, and system performance metrics.</li>
+</ul>
+
+<h2 id="benefits-of-using-energyplus">Benefits of Using EnergyPlus</h2>
+
+<ul>
+  <li><strong>Comprehensive Analysis</strong>: Provides detailed insights into building performance across multiple parameters such as energy consumption, carbon emissions, and occupant comfort.</li>
+  <li><strong>Flexibility</strong>: Allows quick assessment of different design alternatives to evaluate their impact on key performance indicators like annual energy use or overheating hours.</li>
+  <li><strong>Industry Standard</strong>: Widely adopted in the building industry for energy modeling tasks due to its open-source nature funded by the DOE.</li>
+</ul>
+
+<h2 id="applications">Applications</h2>
+
+<p>EnergyPlus is used in various applications including:</p>
+
+<ul>
+  <li>Building design optimization</li>
+  <li>Energy code compliance analysis</li>
+  <li>Renewable energy integration studies</li>
+  <li>Retrofitting existing buildings for improved efficiency</li>
+  <li>Research on building performance metrics</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>EnergyPlus stands out as a robust tool for simulating the complex interactions within buildings regarding energy use. Its ability to model a wide range of systems dynamically makes it invaluable for professionals aiming to design energy-efficient buildings that meet modern sustainability standards. Understanding its features and capabilities can significantly enhance building design processes and operational efficiency assessments.</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

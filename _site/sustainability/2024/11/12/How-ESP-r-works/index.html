@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How ESP-r works | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How ESP-r works" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How the ESP-r Building Energy Model Works" />
+<meta property="og:description" content="How the ESP-r Building Energy Model Works" />
+<link rel="canonical" href="http://localhost:4000/sustainability/2024/11/12/How-ESP-r-works/" />
+<meta property="og:url" content="http://localhost:4000/sustainability/2024/11/12/How-ESP-r-works/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-12T09:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How ESP-r works" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-12T09:00:00+00:00","datePublished":"2024-11-12T09:00:00+00:00","description":"How the ESP-r Building Energy Model Works","headline":"How ESP-r works","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sustainability/2024/11/12/How-ESP-r-works/"},"url":"http://localhost:4000/sustainability/2024/11/12/How-ESP-r-works/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=ae4388b2e0a7bdeaa02b0bcb2564574a71617167">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="how-the-esp-r-building-energy-model-works">How the ESP-r Building Energy Model Works</h1>
+
+<p>ESP-r is an advanced, open-source building energy simulation software developed primarily for research purposes. It enables detailed modeling of <strong>energy and fluid flows</strong> within buildings and their associated systems. The software is designed to assess the dynamic behavior of building physics across multiple domains, including thermal, HVAC, and electrical systems.</p>
+
+<h2 id="key-features-of-esp-r">Key Features of ESP-r</h2>
+
+<h3 id="1-multi-domain-simulation">1. Multi-domain Simulation</h3>
+<p>ESP-r supports a range of simulation domains:</p>
+<ul>
+  <li><strong>Building Thermal Domain:</strong> Models heat transfer in thermal zones using a finite-difference approach to solve heat balance equations at discrete nodes representing different building components (walls, windows, etc.).</li>
+  <li><strong>HVAC Systems:</strong> Allows for the modeling of heating, ventilation, and air conditioning systems at a component level, enabling users to assemble complex HVAC configurations.</li>
+  <li><strong>Electrical Power Flow:</strong> Models electrical networks using nodes that represent various components (e.g., transformers, cables) and calculates power flows using methods like the Newton-Raphson solver.</li>
+</ul>
+
+<h3 id="2-simulation-process">2. Simulation Process</h3>
+<p>The simulation process in ESP-r involves several steps:</p>
+<ul>
+  <li><strong>Discretization:</strong> The building is divided into zones and components, each represented by finite-difference nodes that capture energy flows and thermal interactions.</li>
+  <li><strong>Heat Balance Equations:</strong> For each node, heat balance equations are established to account for energy inputs and outputs. These equations are solved simultaneously for all nodes at each time step to predict the thermal state of the system.</li>
+  <li><strong>Inter-domain Communication:</strong> ESP-r employs a message-passing system to facilitate interactions between different domains (thermal, HVAC, electrical) during simulations, ensuring that changes in one domain are reflected in others.</li>
+</ul>
+
+<h3 id="3-user-interaction-and-flexibility">3. User Interaction and Flexibility</h3>
+<p>ESP-r offers a user-friendly interface that allows for:</p>
+<ul>
+  <li><strong>Model Customization:</strong> Users can define geometric configurations, construction materials, usage profiles, and control strategies tailored to specific projects.</li>
+  <li><strong>Integration with Other Tools:</strong> The software can interact with external tools (e.g., Radiance for lighting simulation) to enhance modeling capabilities and accuracy.</li>
+</ul>
+
+<h3 id="4-validation-and-development-history">4. Validation and Development History</h3>
+<p>ESP-r has undergone extensive validation through initiatives like BESTEST, which benchmarked energy simulation software quality. Originally developed by Professor Joseph Clarke in the 1970s at the University of Strathclyde, it has evolved through contributions from various researchers globally. The source code was made publicly available in 2002 under the GNU General Public License.</p>
+
+<p>In summary, ESP-r is a versatile tool designed for comprehensive energy performance analysis of buildings. Its ability to model complex interactions across multiple domains makes it valuable for researchers and practitioners aiming to optimize building design and energy efficiency.</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

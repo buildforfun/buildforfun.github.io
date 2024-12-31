@@ -5,7 +5,51 @@ title:  "History of Building Energy Modelling"
 date:   2024-10-05 07:00:00
 ---
 
-## History of Building Energy Modelling
+# History of Building Energy Modelling
+
+Building energy modelling (BEM) has evolved significantly over the decades, transitioning from rudimentary estimation methods to sophisticated, data-driven approaches. This evolution has been shaped by technological advancements, environmental concerns, and the increasing demand for energy-efficient buildings.
+
+## Early Developments
+
+- **Basic Energy Calculations:** Initially, energy modelling involved simple calculations based on basic building parameters such as orientation and insulation. These calculations were often performed manually or using basic spreadsheets.
+  
+## Technological Advancements
+
+- **Building Energy Simulation Software:** The introduction of computer-based modelling tools marked a pivotal change in energy modelling. Software like EnergyPlus, DOE-2, and eQUEST allowed for more accurate predictions of building energy performance by considering various factors such as occupancy patterns and HVAC systems.
+
+## Integrated Design Approach
+
+- **Collaboration in Design:** As sustainability became a priority, an integrated design approach emerged. This encouraged collaboration among architects, engineers, and energy modelers during early design stages, making energy modelling a crucial part of the design process to evaluate different design alternatives for optimizing energy performance.
+
+## Regulatory Changes
+
+- **Performance-Based Building Codes:** The growing emphasis on energy efficiency led to the incorporation of energy performance requirements in building codes. Energy modelling became essential for demonstrating compliance with these codes and certifications like LEED.
+
+## Advanced Modelling Techniques
+
+- **Parametric and Optimization Tools:** Advanced tools introduced parametric capabilities, enabling designers to explore multiple design options quickly. This facilitated the identification of the most energy-efficient solutions through rapid evaluation of design iterations.
+
+- **Predictive Analytics and Machine Learning:** The integration of predictive analytics and machine learning expanded the capabilities of energy modelling. By leveraging historical data and real-time information, models could make more accurate predictions and optimize operational strategies.
+
+## Whole-Building Life Cycle Assessment
+
+Energy modelling began to encompass the entire life cycle of buildings, including embodied energy and emissions associated with materials and construction processes. Life cycle assessment (LCA) tools were integrated with energy modelling to provide a comprehensive understanding of a building's environmental impact.
+
+## Cloud-Based Solutions
+
+The shift towards cloud-based platforms has facilitated collaboration among project stakeholders, allowing for improved data sharing and accessibility in energy modelling software. Many tools are now offered as Software-as-a-Service (SaaS), enhancing usability and integration in various projects.
+
+## Recent Developments
+
+- **Home Energy Model:** In December 2023, the UK government announced the Home Energy Model, designed to replace the Standard Assessment Procedure (SAP). This new model aims to assess residential energy performance more accurately by simulating energy performance at half-hour intervals rather than monthly averages. 
+
+- **Historical Context of SAP:** The Standard Assessment Procedure was first published in 1993 as a methodology for assessing dwelling energy performance. Over the years, it has undergone several updates to align with evolving standards and technologies in building energy assessment.
+
+## Conclusion
+
+The history of building energy modelling reflects a continuous progression towards more accurate, efficient, and comprehensive methods for assessing building performance. As technology advances and environmental standards become stricter, BEM will likely continue to evolve, integrating new methodologies and tools to meet the demands of sustainable construction practices.
+
+
 ### Detailed Overview of Building Energy Simulation Models (1990s - 2000s)
 
 ### 1. EnergyPlus
