@@ -10,9 +10,10 @@ date:   2024-12-2 11:00:00
 Rules
 1. Good sleep
 2. Good exercise
-3. Good food
+3. Good food - Mediterranean-style diet 
 4. Good work
 5. Good relations
+6. Healthy BMI - 22.5
 
 
 - What activities bring you joy?
