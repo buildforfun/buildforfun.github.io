@@ -20,12 +20,6 @@ the way things get done in the world is through focus, personal connections, and
 
 learning from everything you do and meeting as many people as possible.
 
-Be A DOER!!! Don't just sit around and talk. Build things. 
-
-Ask for what you want. 
-
-Be more aggressive.
-
 Each crisis get's less scary as you go through it. 
 
 create value for people over a long period of time. This is going to take time. 
