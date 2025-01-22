@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data analyst | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Data analyst" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data analyst" />
+<meta property="og:description" content="Data analyst" />
+<link rel="canonical" href="http://localhost:4000/programming/2025/01/01/data-analyst/" />
+<meta property="og:url" content="http://localhost:4000/programming/2025/01/01/data-analyst/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-01T08:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data analyst" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-01T08:00:00+00:00","datePublished":"2025-01-01T08:00:00+00:00","description":"Data analyst","headline":"Data analyst","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2025/01/01/data-analyst/"},"url":"http://localhost:4000/programming/2025/01/01/data-analyst/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=69b42ab596a967db42f70bc696c206daadea30fc">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="data-analyst">Data analyst</h1>
+
+<h2 id="data-extraction-cleaning-and-quality-assessment-in-postgresql">Data Extraction, Cleaning, and Quality Assessment in PostgreSQL</h2>
+
+<h3 id="1-data-extraction-joining-and-aggregation-tasks">1. Data Extraction, Joining, and Aggregation Tasks</h3>
+
+<p><strong>Aggregate Numeric, Categorical Variables, and Dates by Groups:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">GROUP BY</code> clause to aggregate data in PostgreSQL. This allows you to summarize data into distinct categories based on one or more columns.</li>
+  <li>Common aggregate functions include:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">SUM()</code>: Calculates the total sum of a numeric column.</li>
+      <li><code class="language-plaintext highlighter-rouge">AVG()</code>: Computes the average of a numeric column.</li>
+      <li><code class="language-plaintext highlighter-rouge">COUNT()</code>: Counts the number of rows in a group.</li>
+      <li>Example Query:
+        <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">department_id</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">department_id</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpret Database Schema and Combine Tables:</strong></p>
+<ul>
+  <li>Understand the relationships between tables using primary and foreign keys.</li>
+  <li>Use different types of joins (INNER JOIN, LEFT JOIN, RIGHT JOIN) to combine data from multiple tables based on common fields.</li>
+  <li>Example of a LEFT JOIN:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">a</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="o">*</span> <span class="k">FROM</span> <span class="n">table_a</span> <span class="n">a</span> <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">table_b</span> <span class="n">b</span> <span class="k">ON</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">a_id</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Extract Data Based on Conditions:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">WHERE</code> clause to filter records based on specific conditions.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">orders</span> <span class="k">WHERE</span> <span class="n">order_date</span> <span class="o">&gt;</span> <span class="s1">'2023-01-01'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Subqueries for Referencing Other Tables:</strong></p>
+<ul>
+  <li>Utilize subqueries to reference another table within your main query. This is useful for complex queries requiring data from multiple sources.</li>
+  <li>Example of a subquery:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">department_id</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">departments</span> <span class="k">WHERE</span> <span class="k">location</span> <span class="o">=</span> <span class="s1">'New York'</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="2-cleaning-tasks-to-prepare-data-for-analysis">2. Cleaning Tasks to Prepare Data for Analysis</h3>
+
+<p><strong>Match Strings with Specific Patterns:</strong></p>
+<ul>
+  <li>Use regular expressions with the <code class="language-plaintext highlighter-rouge">SIMILAR TO</code> or <code class="language-plaintext highlighter-rouge">~</code> operators for pattern matching.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">users</span> <span class="k">WHERE</span> <span class="n">email</span> <span class="o">~</span> <span class="s1">'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+</span><span class="se">\\</span><span class="s1">.[a-zA-Z]{2,}$'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Convert Values Between Data Types:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">CAST()</code> function or the <code class="language-plaintext highlighter-rouge">::</code> operator to convert data types.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">CAST</span><span class="p">(</span><span class="n">price</span> <span class="k">AS</span> <span class="nb">numeric</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">products</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Clean Categorical and Text Data:</strong></p>
+<ul>
+  <li>Functions like <code class="language-plaintext highlighter-rouge">TRIM()</code>, <code class="language-plaintext highlighter-rouge">LOWER()</code>, and <code class="language-plaintext highlighter-rouge">UPPER()</code> can help standardize text data by removing spaces and changing case.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">UPDATE</span> <span class="n">customers</span> <span class="k">SET</span> <span class="n">name</span> <span class="o">=</span> <span class="k">TRIM</span><span class="p">(</span><span class="k">LOWER</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Clean Date and Time Data:</strong></p>
+<ul>
+  <li>Use date functions to format and validate date entries.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">UPDATE</span> <span class="n">events</span> <span class="k">SET</span> <span class="n">event_date</span> <span class="o">=</span> <span class="n">TO_DATE</span><span class="p">(</span><span class="n">event_date</span><span class="p">,</span> <span class="s1">'YYYY-MM-DD'</span><span class="p">)</span> <span class="k">WHERE</span> <span class="n">event_date</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="3-assess-data-quality-and-perform-validation-tasks">3. Assess Data Quality and Perform Validation Tasks</h3>
+
+<p><strong>Identify and Replace Missing Values:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">COALESCE()</code> function to replace NULL values with default values.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">COALESCE</span><span class="p">(</span><span class="n">phone_number</span><span class="p">,</span> <span class="s1">'N/A'</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">contacts</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Perform Data Validation Tasks:</strong></p>
+<ul>
+  <li>Implement checks for consistency and constraints using SQL constraints (e.g., NOT NULL, UNIQUE).</li>
+  <li>Example Query for checking uniqueness:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">users</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">email</span> <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Identify and Validate Data Types:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">pg_typeof()</code> function to check data types of columns in your dataset.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">,</span> <span class="n">pg_typeof</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">columns</span> <span class="k">WHERE</span> <span class="k">table_name</span> <span class="o">=</span> <span class="s1">'your_table'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="detailed-notes-on-calculating-metrics-in-postgresql">Detailed Notes on Calculating Metrics in PostgreSQL</h2>
+
+<h3 id="1-calculate-measures-of-center">1. Calculate Measures of Center</h3>
+
+<p><strong>Mean:</strong></p>
+<ul>
+  <li>The mean is calculated by summing all values of a variable and dividing by the total number of values.</li>
+  <li>In PostgreSQL, use the <code class="language-plaintext highlighter-rouge">AVG()</code> function to compute the mean.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">average_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Median:</strong></p>
+<ul>
+  <li>The median represents the middle value when data is sorted. If there is an even number of observations, it is the average of the two middle values.</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY column_name)</code> to calculate the median in PostgreSQL.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">PERCENTILE_CONT</span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="n">WITHIN</span> <span class="k">GROUP</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">median_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Mode:</strong></p>
+<ul>
+  <li>The mode is the most frequently occurring value in a dataset.</li>
+  <li>In PostgreSQL, use <code class="language-plaintext highlighter-rouge">MODE() WITHIN GROUP (ORDER BY column_name)</code> to find the mode.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">MODE</span><span class="p">()</span> <span class="n">WITHIN</span> <span class="k">GROUP</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">mode_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="2-calculate-measures-of-spread">2. Calculate Measures of Spread</h3>
+
+<p><strong>Range:</strong></p>
+<ul>
+  <li>The range is the difference between the maximum and minimum values in a dataset.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">MAX()</code> and <code class="language-plaintext highlighter-rouge">MIN()</code> functions to calculate the range.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">-</span> <span class="k">MIN</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">age_range</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Standard Deviation:</strong></p>
+<ul>
+  <li>Standard deviation measures how spread out numbers are from the mean.</li>
+  <li>In PostgreSQL, use <code class="language-plaintext highlighter-rouge">STDDEV()</code> for sample standard deviation and <code class="language-plaintext highlighter-rouge">STDDEV_POP()</code> for population standard deviation.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">STDDEV</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">stddev_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Variance:</strong></p>
+<ul>
+  <li>Variance quantifies how much values differ from the mean.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">VARIANCE()</code> for sample variance and <code class="language-plaintext highlighter-rouge">VAR_POP()</code> for population variance.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">VARIANCE</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">variance_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="3-calculate-skewness">3. Calculate Skewness</h3>
+
+<ul>
+  <li>Skewness measures the asymmetry of the distribution of values in a dataset.</li>
+  <li>PostgreSQL does not have a built-in function for skewness, but it can be calculated using custom formulas or extensions like <code class="language-plaintext highlighter-rouge">tablefunc</code>.</li>
+  <li>Example Calculation:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">-</span> <span class="n">MEDIAN</span><span class="p">(</span><span class="n">age</span><span class="p">)))</span> <span class="o">/</span> <span class="n">STDDEV</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">skewness_age</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="4-calculate-missingness">4. Calculate Missingness</h3>
+
+<p><strong>Missing Values:</strong></p>
+<ul>
+  <li>Missingness refers to the presence of NULL values in a dataset. It’s crucial to assess how missing data can impact analysis and reporting.</li>
+  <li>To calculate missingness, use:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">-</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">missing_age_count</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Influence on Reporting:</strong></p>
+<ul>
+  <li>Missing data can skew results, reduce statistical power, and lead to biased conclusions. It’s essential to handle missing values appropriately through imputation or exclusion based on analysis needs.</li>
+</ul>
+
+<h3 id="5-calculate-correlation-between-variables">5. Calculate Correlation Between Variables</h3>
+
+<p><strong>Correlation:</strong></p>
+<ul>
+  <li>Correlation assesses how closely related two variables are. It ranges from -1 (perfect negative correlation) to +1 (perfect positive correlation).</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">CORR(column1, column2)</code> to compute correlation in PostgreSQL.</li>
+  <li>Example Query:
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">CORR</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span> <span class="k">AS</span> <span class="n">correlation_height_weight</span> <span class="k">FROM</span> <span class="n">athletes</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="detailed-notes-on-data-visualizations-and-hypothesis-testing">Detailed Notes on Data Visualizations and Hypothesis Testing</h2>
+
+<h3 id="22-read-and-analyze-data-visualizations-to-demonstrate-characteristics-of-data">2.2 Read and Analyze Data Visualizations to Demonstrate Characteristics of Data</h3>
+
+<p><strong>Types of Data Visualizations:</strong></p>
+<ul>
+  <li><strong>Bar Chart:</strong>
+    <ul>
+      <li>Used to compare different categories or groups.</li>
+      <li>Displays rectangular bars with lengths proportional to the values they represent.</li>
+      <li>Effective for categorical data.</li>
+    </ul>
+  </li>
+  <li><strong>Box Plot:</strong>
+    <ul>
+      <li>Summarizes data through five-number summaries: minimum, first quartile (Q1), median, third quartile (Q3), and maximum.</li>
+      <li>Shows the distribution of data and identifies outliers.</li>
+    </ul>
+  </li>
+  <li><strong>Line Graph:</strong>
+    <ul>
+      <li>Illustrates trends over time by connecting data points with lines.</li>
+      <li>Best for continuous data and showing changes over intervals.</li>
+    </ul>
+  </li>
+  <li><strong>Histogram:</strong>
+    <ul>
+      <li>Represents the frequency distribution of numerical data by dividing the data into bins.</li>
+      <li>Useful for understanding the distribution shape (e.g., normal, skewed).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpreting Data Visualizations:</strong></p>
+<ul>
+  <li><strong>Bar Chart Interpretation:</strong>
+    <ul>
+      <li>Identify which categories have higher or lower values.</li>
+      <li>Assess trends or patterns across categories.</li>
+    </ul>
+  </li>
+  <li><strong>Box Plot Interpretation:</strong>
+    <ul>
+      <li>Analyze the spread and central tendency of the data.</li>
+      <li>Identify any outliers that may affect analysis.</li>
+    </ul>
+  </li>
+  <li><strong>Line Graph Interpretation:</strong>
+    <ul>
+      <li>Observe trends over time, such as increases or decreases in values.</li>
+      <li>Determine periods of stability or volatility.</li>
+    </ul>
+  </li>
+  <li><strong>Histogram Interpretation:</strong>
+    <ul>
+      <li>Assess the shape of the distribution (e.g., normal, bimodal).</li>
+      <li>Identify ranges where most data points fall.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="23-read-and-analyze-data-visualizations-to-represent-relationships-between-features">2.3 Read and Analyze Data Visualizations to Represent Relationships Between Features</h3>
+
+<p><strong>Types of Data Visualizations for Relationships:</strong></p>
+<ul>
+  <li><strong>Scatterplot:</strong>
+    <ul>
+      <li>Displays values for two variables across a Cartesian plane.</li>
+      <li>Useful for identifying correlations or relationships between features.</li>
+    </ul>
+  </li>
+  <li><strong>Heatmap:</strong>
+    <ul>
+      <li>Represents data values in a matrix format using color gradients.</li>
+      <li>Effective for visualizing complex relationships and patterns in large datasets.</li>
+    </ul>
+  </li>
+  <li><strong>Pivot Table:</strong>
+    <ul>
+      <li>A table that summarizes data from a larger dataset, allowing for easy comparison across different dimensions.</li>
+      <li>Enables quick analysis of relationships between multiple variables.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpreting Data Visualizations for Relationships:</strong></p>
+<ul>
+  <li><strong>Scatterplot Interpretation:</strong>
+    <ul>
+      <li>Look for patterns indicating correlation (positive, negative, or none).</li>
+      <li>Assess the strength of the relationship based on how closely points cluster along a line.</li>
+    </ul>
+  </li>
+  <li><strong>Heatmap Interpretation:</strong>
+    <ul>
+      <li>Identify areas with high or low values based on color intensity.</li>
+      <li>Useful for spotting trends and anomalies in multi-dimensional datasets.</li>
+    </ul>
+  </li>
+  <li><strong>Pivot Table Interpretation:</strong>
+    <ul>
+      <li>Analyze summarized data to identify relationships and trends across different dimensions.</li>
+      <li>Facilitate comparisons between categories and features effectively.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="31-describe-statistical-concepts-underpinning-hypothesis-testing-and-experimentation">3.1 Describe Statistical Concepts Underpinning Hypothesis Testing and Experimentation</h3>
+
+<p><strong>Statistical Distributions:</strong></p>
+<ul>
+  <li><strong>Binomial Distribution:</strong>
+    <ul>
+      <li>Models the number of successes in a fixed number of independent Bernoulli trials (e.g., coin flips).</li>
+    </ul>
+  </li>
+  <li><strong>Normal Distribution:</strong>
+    <ul>
+      <li>A continuous probability distribution characterized by its bell-shaped curve; defined by its mean and standard deviation.</li>
+    </ul>
+  </li>
+  <li><strong>Poisson Distribution:</strong>
+    <ul>
+      <li>Models the number of events occurring within a fixed interval of time or space, given a known average rate.</li>
+    </ul>
+  </li>
+  <li><strong>t-distribution:</strong>
+    <ul>
+      <li>Used in hypothesis testing when sample sizes are small and population standard deviation is unknown; it is similar to the normal distribution but has heavier tails.</li>
+    </ul>
+  </li>
+  <li><strong>Chi-square Distribution:</strong>
+    <ul>
+      <li>Used primarily in tests of independence and goodness-of-fit; it assesses how observed frequencies differ from expected frequencies.</li>
+    </ul>
+  </li>
+  <li><strong>F-distribution:</strong>
+    <ul>
+      <li>Used in analysis of variance (ANOVA) tests; it compares variances between two populations.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Hypothesis Testing Concepts:</strong></p>
+<ul>
+  <li><strong>Null Hypothesis (\(H_0\)):</strong>
+    <ul>
+      <li>The statement being tested, typically positing no effect or no difference.</li>
+    </ul>
+  </li>
+  <li><strong>Alternative Hypothesis (\(H_1\) or \(H_a\)):</strong>
+    <ul>
+      <li>The statement that indicates the presence of an effect or difference.</li>
+    </ul>
+  </li>
+  <li><strong>One-tailed vs. Two-tailed Tests:</strong>
+    <ul>
+      <li>One-tailed tests assess if a parameter is either greater than or less than a certain value, while two-tailed tests assess if it is simply different from that value.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Steps in Hypothesis Testing:</strong></p>
+<ol>
+  <li>State \(H_0\) and \(H_1\).</li>
+  <li>Collect relevant data.</li>
+  <li>Perform an appropriate statistical test to calculate a test statistic (e.g., t-value).</li>
+  <li>Determine the p-value associated with the test statistic.</li>
+  <li>Compare p-value to significance level (\(\alpha\)); reject \(H_0\) if \(p &lt; \alpha\).</li>
+</ol>
+
+<h2 id="detailed-notes-on-data-management-exploratory-analysis-and-statistical-experimentation-in-python">Detailed Notes on Data Management, Exploratory Analysis, and Statistical Experimentation in Python</h2>
+
+<h3 id="11-perform-standard-data-import-joining-and-aggregation-tasks">1.1 Perform Standard Data Import, Joining, and Aggregation Tasks</h3>
+
+<p><strong>Import Data from Flat Files:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">pandas</code> library to import data from CSV files or Excel files.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+  <span class="c1"># Importing a CSV file
+</span>  <span class="n">df_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'data.csv'</span><span class="p">)</span>
+
+  <span class="c1"># Importing an Excel file
+</span>  <span class="n">df_excel</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">'data.xlsx'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Import Data from Databases:</strong></p>
+<ul>
+  <li>Use libraries like <code class="language-plaintext highlighter-rouge">SQLAlchemy</code> or <code class="language-plaintext highlighter-rouge">sqlite3</code> to connect to databases and fetch data into pandas DataFrames.</li>
+  <li>Example using SQLAlchemy:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+
+  <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">'sqlite:///database.db'</span><span class="p">)</span>
+  <span class="n">df_db</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s">'SELECT * FROM table_name'</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Aggregate Numeric, Categorical Variables, and Dates:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">groupby()</code> function to aggregate data by groups.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">aggregated_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'category_column'</span><span class="p">).</span><span class="n">agg</span><span class="p">({</span><span class="s">'numeric_column'</span><span class="p">:</span> <span class="s">'mean'</span><span class="p">,</span> <span class="s">'date_column'</span><span class="p">:</span> <span class="s">'max'</span><span class="p">})</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Combine Multiple Tables by Rows or Columns:</strong></p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">pd.concat()</code> to combine DataFrames either vertically (rows) or horizontally (columns).</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">combined_rows</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Concatenate rows
+</span>  <span class="n">combined_columns</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Concatenate columns
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Filter Data Based on Different Criteria:</strong></p>
+<ul>
+  <li>Utilize boolean indexing to filter DataFrames based on conditions.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'column_name'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="12-perform-standard-cleaning-tasks-to-prepare-data-for-analysis">1.2 Perform Standard Cleaning Tasks to Prepare Data for Analysis</h3>
+
+<p><strong>Match Strings with Specific Patterns:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">str.contains()</code> method for pattern matching with regular expressions.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'text_column'</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">'pattern'</span><span class="p">)]</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Convert Values Between Data Types:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">astype()</code> method to convert data types.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">df</span><span class="p">[</span><span class="s">'column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'column_name'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Clean Categorical and Text Data:</strong></p>
+<ul>
+  <li>Use string manipulation methods such as <code class="language-plaintext highlighter-rouge">str.strip()</code>, <code class="language-plaintext highlighter-rouge">str.lower()</code>, and <code class="language-plaintext highlighter-rouge">str.replace()</code>.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">df</span><span class="p">[</span><span class="s">'text_column'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'text_column'</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="nb">str</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="nb">str</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'old_value'</span><span class="p">,</span> <span class="s">'new_value'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Clean Date and Time Data:</strong></p>
+<ul>
+  <li>Convert strings to datetime objects using <code class="language-plaintext highlighter-rouge">pd.to_datetime()</code>.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">df</span><span class="p">[</span><span class="s">'date_column'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'date_column'</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s">'%Y-%m-%d'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="13-assess-data-quality-and-perform-validation-tasks">1.3 Assess Data Quality and Perform Validation Tasks</h3>
+
+<p><strong>Identify and Replace Missing Values:</strong></p>
+<ul>
+  <li>Use methods like <code class="language-plaintext highlighter-rouge">fillna()</code> for imputation or <code class="language-plaintext highlighter-rouge">dropna()</code> for removal of missing values.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">df</span><span class="p">[</span><span class="s">'column_name'</span><span class="p">].</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">'default_value'</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Perform Different Types of Data Validation Tasks:</strong></p>
+<ul>
+  <li>Check for duplicates using <code class="language-plaintext highlighter-rouge">duplicated()</code> and remove them with <code class="language-plaintext highlighter-rouge">drop_duplicates()</code>.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Identify and Validate Data Types:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">dtypes</code> attribute to check data types of columns.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">dtypes</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="14-collect-data-from-non-standard-formats-by-modifying-existing-code">1.4 Collect Data from Non-standard Formats by Modifying Existing Code</h3>
+
+<p><strong>Adapt Provided Code to Import Data from an API:</strong></p>
+<ul>
+  <li>Use libraries like <code class="language-plaintext highlighter-rouge">requests</code> to fetch data from APIs and convert it into a pandas DataFrame.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">requests</span>
+
+  <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.example.com/data'</span><span class="p">)</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">()</span>
+  <span class="n">df_api</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Identify the Structure of HTML and JSON Data:</strong></p>
+<ul>
+  <li>For HTML, use libraries like <code class="language-plaintext highlighter-rouge">BeautifulSoup</code> to parse web pages.
+    <ul>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+  <span class="n">html_content</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://example.com'</span><span class="p">).</span><span class="n">text</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+  <span class="n">table_data</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'table'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>For JSON, use the built-in <code class="language-plaintext highlighter-rouge">json</code> library to parse JSON strings.
+    <ul>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">json</span>
+      
+  <span class="n">json_data</span> <span class="o">=</span> <span class="s">'{"key": "value"}'</span>
+  <span class="n">parsed_data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="detailed-notes-on-calculating-metrics-and-creating-visualizations-in-python">Detailed Notes on Calculating Metrics and Creating Visualizations in Python</h2>
+
+<h3 id="21-calculate-metrics-to-effectively-report-characteristics-of-data-and-relationships-between-features">2.1 Calculate Metrics to Effectively Report Characteristics of Data and Relationships Between Features</h3>
+
+<p><strong>Calculate Measures of Center:</strong></p>
+
+<ul>
+  <li><strong>Mean:</strong>
+    <ul>
+      <li>Use the <code class="language-plaintext highlighter-rouge">statistics</code> module or <code class="language-plaintext highlighter-rouge">pandas</code> for calculating the mean.</li>
+      <li>Example using <code class="language-plaintext highlighter-rouge">statistics</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">statistics</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">mean_value</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Mean:"</span><span class="p">,</span> <span class="n">mean_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Example using <code class="language-plaintext highlighter-rouge">pandas</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'values'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]})</span>
+<span class="n">mean_value</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">].</span><span class="n">mean</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Mean:"</span><span class="p">,</span> <span class="n">mean_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Median:</strong>
+    <ul>
+      <li>Example using <code class="language-plaintext highlighter-rouge">statistics</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">median_value</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Median:"</span><span class="p">,</span> <span class="n">median_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Example using <code class="language-plaintext highlighter-rouge">pandas</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">median_value</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">].</span><span class="n">median</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Median:"</span><span class="p">,</span> <span class="n">median_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Mode:</strong>
+    <ul>
+      <li>Example using <code class="language-plaintext highlighter-rouge">statistics</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mode_value</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Mode:"</span><span class="p">,</span> <span class="n">mode_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Example using <code class="language-plaintext highlighter-rouge">pandas</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mode_value</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">].</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># mode() returns a Series
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Mode:"</span><span class="p">,</span> <span class="n">mode_value</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Calculate Measures of Spread:</strong></p>
+
+<ul>
+  <li><strong>Range:</strong>
+    <ul>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data_range</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Range:"</span><span class="p">,</span> <span class="n">data_range</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Standard Deviation and Variance:</strong>
+    <ul>
+      <li>Example using <code class="language-plaintext highlighter-rouge">statistics</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std_dev</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Sample standard deviation
+</span><span class="n">variance</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">.</span><span class="n">variance</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Sample variance
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Standard Deviation:"</span><span class="p">,</span> <span class="n">std_dev</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Variance:"</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Example using <code class="language-plaintext highlighter-rouge">pandas</code>:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std_dev</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">].</span><span class="n">std</span><span class="p">()</span>
+<span class="n">variance</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">].</span><span class="n">var</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Standard Deviation (pandas):"</span><span class="p">,</span> <span class="n">std_dev</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Variance (pandas):"</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Calculate Skewness:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">scipy.stats</code> library for skewness calculation.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skew</span>
+
+<span class="n">skewness</span> <span class="o">=</span> <span class="n">skew</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Skewness:"</span><span class="p">,</span> <span class="n">skewness</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Calculate Missingness:</strong></p>
+<ul>
+  <li>Identify missing values in a dataset.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">missing_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">isnull</span><span class="p">().</span><span class="nb">sum</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Missing Values:</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">missing_count</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Influence on Reporting:</strong>
+    <ul>
+      <li>Missing data can lead to biased results and affect statistical power. It’s crucial to handle missing values appropriately through imputation or exclusion.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Calculate Correlation Between Variables:</strong></p>
+<ul>
+  <li>Use the <code class="language-plaintext highlighter-rouge">corr()</code> method in pandas to calculate correlation.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="s">'another_column'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">corr</span><span class="p">().</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Correlation between first two columns
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Correlation:"</span><span class="p">,</span> <span class="n">correlation</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="22-create-data-visualizations-to-demonstrate-the-characteristics-of-data">2.2 Create Data Visualizations to Demonstrate the Characteristics of Data</h3>
+
+<p><strong>Create and Customize Bar Charts:</strong></p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">matplotlib</code> or <code class="language-plaintext highlighter-rouge">seaborn</code>.</li>
+  <li>Example with <code class="language-plaintext highlighter-rouge">matplotlib</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'category'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">])</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Bar Chart'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Category'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Values'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Example with <code class="language-plaintext highlighter-rouge">seaborn</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+ <span class="n">sns</span><span class="p">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'category'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'values'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Bar Chart with Seaborn'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Create and Customize Box Plots:</strong></p>
+<ul>
+  <li>Example with <code class="language-plaintext highlighter-rouge">seaborn</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">sns</span><span class="p">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'category'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'values'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Box Plot'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Create and Customize Line Graphs:</strong></p>
+<ul>
+  <li>Example with <code class="language-plaintext highlighter-rouge">matplotlib</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'date'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">])</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Line Graph'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Date'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Values'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Create and Customize Histograms:</strong></p>
+<ul>
+  <li>Example with <code class="language-plaintext highlighter-rouge">matplotlib</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'values'</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Histogram'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Values'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Frequency'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="23-create-data-visualizations-to-represent-the-relationships-between-features">2.3 Create Data Visualizations to Represent the Relationships Between Features</h3>
+
+<p><strong>Create and Customize Scatterplots:</strong></p>
+<ul>
+  <li>Example with <code class="language-plaintext highlighter-rouge">seaborn</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">sns</span><span class="p">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'feature1'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'feature2'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Scatterplot'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Create and Customize Heatmaps:</strong></p>
+<ul>
+  <li>Use correlation matrices to create heatmaps.</li>
+  <li>Example with <code class="language-plaintext highlighter-rouge">seaborn</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">corr</span><span class="p">()</span>
+ <span class="n">sns</span><span class="p">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'coolwarm'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Heatmap of Correlation Matrix'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Create and Customize Pivot Tables:</strong></p>
+<ul>
+  <li>Use pandas to create pivot tables and visualize them.</li>
+  <li>Example:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">pivot_table</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s">'values'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s">'category'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s">'another_column'</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)</span>
+   
+ <span class="c1"># Visualizing pivot table as a heatmap
+</span> <span class="n">sns</span><span class="p">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">pivot_table</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'viridis'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Pivot Table Heatmap'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="detailed-notes-on-sampling-methods-and-statistical-tests-in-python">Detailed Notes on Sampling Methods and Statistical Tests in Python</h2>
+
+<h3 id="31-apply-sampling-methods-to-data">3.1 Apply Sampling Methods to Data</h3>
+
+<p><strong>Distinguish Between Different Types of Random Sampling Techniques:</strong></p>
+<ul>
+  <li><strong>Simple Random Sampling:</strong> Each member of the population has an equal chance of being selected. Use <code class="language-plaintext highlighter-rouge">random.sample()</code> for this.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">population</span> <span class="o">=</span> <span class="p">[</span><span class="s">'apple'</span><span class="p">,</span> <span class="s">'banana'</span><span class="p">,</span> <span class="s">'cherry'</span><span class="p">,</span> <span class="s">'date'</span><span class="p">,</span> <span class="s">'elderberry'</span><span class="p">]</span>
+<span class="n">sample_size</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">sample_size</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Simple Random Sample:"</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Stratified Sampling:</strong> The population is divided into strata, and random samples are taken from each stratum.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">'category'</span><span class="p">:</span> <span class="p">[</span><span class="s">'A'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">],</span>
+    <span class="s">'value'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">})</span>
+  
+<span class="n">stratified_sample</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'category'</span><span class="p">).</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Stratified Sample:</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">stratified_sample</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Systematic Sampling:</strong> A starting point is chosen randomly, and every nth member is selected.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">systematic_sample</span> <span class="o">=</span> <span class="n">population</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># Taking every second element
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Systematic Sample:"</span><span class="p">,</span> <span class="n">systematic_sample</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Sample Data from a Statistical Distribution:</strong></p>
+<ul>
+  <li><strong>Normal Distribution:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">normal_samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># mean=0, std=1
+</span></code></pre></div>    </div>
+  </li>
+  <li><strong>Binomial Distribution:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binomial_samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># n trials, p probability
+</span></code></pre></div>    </div>
+  </li>
+  <li><strong>Poisson Distribution:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poisson_samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># lambda parameter
+</span></code></pre></div>    </div>
+  </li>
+  <li><strong>Exponential Distribution:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">exponential_samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># scale parameter
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Calculate a Probability from a Statistical Distribution:</strong></p>
+<ul>
+  <li><strong>Normal Distribution Probability:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+
+ <span class="n">probability_less_than_40</span> <span class="o">=</span> <span class="n">norm</span><span class="p">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  
+ <span class="k">print</span><span class="p">(</span><span class="s">"P(X &lt;= 40):"</span><span class="p">,</span> <span class="n">probability_less_than_40</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Binomial Distribution Probability:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+
+ <span class="n">probability_k_successes</span> <span class="o">=</span> <span class="n">binom</span><span class="p">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  
+ <span class="k">print</span><span class="p">(</span><span class="s">"P(X = 5 successes):"</span><span class="p">,</span> <span class="n">probability_k_successes</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Poisson Distribution Probability:</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+
+ <span class="n">probability_k_occurrences</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  
+ <span class="k">print</span><span class="p">(</span><span class="s">"P(X = 3 occurrences):"</span><span class="p">,</span> <span class="n">probability_k_occurrences</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="32-implement-methods-for-performing-statistical-tests">3.2 Implement Methods for Performing Statistical Tests</h3>
+
+<p><strong>Run Statistical Tests:</strong></p>
+
+<ul>
+  <li><strong>T-Test:</strong>
+    <ul>
+      <li>Independent T-test to compare means of two groups.
+ ```python
+ from scipy import stats</li>
+    </ul>
+
+    <p>group_a = np.random.normal(5.0, 1.5, size=30)
+ group_b = np.random.normal(6.0, 1.5, size=30)</p>
+
+    <p>t_statistic, p_value = stats.ttest_ind(group_a, group_b)
+ print(f”T-Statistic: {t_statistic}, P-Value: {p_value}”)
+ ```</p>
+  </li>
+  <li><strong>ANOVA Test:</strong>
+    <ul>
+      <li>One-way ANOVA to compare means of three or more groups.
+ ```python
+ group1 = np.random.normal(5.0, 1.5, size=30)
+ group2 = np.random.normal(6.0, 1.5, size=30)
+ group3 = np.random.normal(7.0, 1.5, size=30)</li>
+    </ul>
+
+    <p>f_statistic, p_value_anova = stats.f_oneway(group1, group2, group3)
+ print(f”F-Statistic: {f_statistic}, P-Value: {p_value_anova}”)
+ ```</p>
+  </li>
+  <li><strong>Chi-Square Test:</strong>
+    <ul>
+      <li>Test for independence between categorical variables.
+ ```python
+ observed_frequencies = np.array([[10, 20], [20, 25]])</li>
+    </ul>
+
+    <p>chi2_statistic, p_value_chi2, _, _ = stats.chi2_contingency(observed_frequencies)
+ print(f”Chi-Square Statistic: {chi2_statistic}, P-Value: {p_value_chi2}”)
+ ```</p>
+  </li>
+</ul>
+
+<p><strong>Analyze the Results of Statistical Tests:</strong></p>
+<ul>
+  <li>Interpret the results based on the p-value:
+    <ul>
+      <li>If \(p &lt; \alpha\) (commonly set at \(\alpha = 0.05\)), reject the null hypothesis.</li>
+      <li>Example interpretation:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+      
+<span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;</span> <span class="n">alpha</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Reject the null hypothesis."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Fail to reject the null hypothesis."</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>These notes provide a comprehensive overview of sampling methods and statistical tests in Python. Each section includes practical examples that can be directly applied in real-world scenarios to facilitate understanding and application of statistical concepts and techniques.</p>
+
+<p>Here are examples of SQL commands that utilize the <code class="language-plaintext highlighter-rouge">UNION</code> and <code class="language-plaintext highlighter-rouge">INTERSECT</code> operators:</p>
+
+<h3 id="using-union">Using UNION</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">UNION</code> operator combines the results of two or more <code class="language-plaintext highlighter-rouge">SELECT</code> statements, returning all unique rows from both queries.</p>
+
+<h4 id="example-of-union">Example of UNION</h4>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">Name</span> <span class="k">FROM</span> <span class="n">Employees</span>
+<span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="n">Name</span> <span class="k">FROM</span> <span class="n">Customers</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>In this example, the query retrieves all unique names from both the <code class="language-plaintext highlighter-rouge">Employees</code> and <code class="language-plaintext highlighter-rouge">Customers</code> tables.</p>
+
+<h3 id="using-intersect">Using INTERSECT</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">INTERSECT</code> operator returns only the rows that are common between two <code class="language-plaintext highlighter-rouge">SELECT</code> statements. Both queries must return the same number of columns with compatible data types.</p>
+
+<h4 id="example-of-intersect">Example of INTERSECT</h4>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">Name</span><span class="p">,</span> <span class="n">BirthDate</span> <span class="k">FROM</span> <span class="n">Employees</span>
+<span class="k">INTERSECT</span>
+<span class="k">SELECT</span> <span class="n">Name</span><span class="p">,</span> <span class="n">BirthDate</span> <span class="k">FROM</span> <span class="n">Customers</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This query returns only the names and birth dates that exist in both the <code class="language-plaintext highlighter-rouge">Employees</code> and <code class="language-plaintext highlighter-rouge">Customers</code> tables.</p>
+
+<h3 id="summary-of-usage">Summary of Usage</h3>
+
+<ul>
+  <li><strong>UNION</strong>: Use when you want to combine results from multiple queries and ensure that duplicate rows are removed.</li>
+  <li><strong>INTERSECT</strong>: Use when you want to find common rows between two queries.</li>
+</ul>
+
+<p>These examples demonstrate how to effectively use the <code class="language-plaintext highlighter-rouge">UNION</code> and <code class="language-plaintext highlighter-rouge">INTERSECT</code> operators in SQL to manipulate and analyze data across multiple tables.</p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

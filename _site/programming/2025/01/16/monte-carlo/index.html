@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Monte carlo simulation | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Monte carlo simulation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding Monte Carlo Simulation for Uncertainties" />
+<meta property="og:description" content="Understanding Monte Carlo Simulation for Uncertainties" />
+<link rel="canonical" href="http://localhost:4000/programming/2025/01/16/monte-carlo/" />
+<meta property="og:url" content="http://localhost:4000/programming/2025/01/16/monte-carlo/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-16T08:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Monte carlo simulation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-16T08:00:00+00:00","datePublished":"2025-01-16T08:00:00+00:00","description":"Understanding Monte Carlo Simulation for Uncertainties","headline":"Monte carlo simulation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2025/01/16/monte-carlo/"},"url":"http://localhost:4000/programming/2025/01/16/monte-carlo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=69b42ab596a967db42f70bc696c206daadea30fc">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="understanding-monte-carlo-simulation-for-uncertainties">Understanding Monte Carlo Simulation for Uncertainties</h1>
+
+<p>Monte Carlo simulation is a powerful statistical technique used to understand the impact of uncertainty and variability in various fields, including finance, engineering, project management, and scientific research. This method relies on repeated random sampling to obtain numerical results and is particularly useful for modeling complex systems where analytical solutions are difficult to achieve.</p>
+
+<h2 id="what-is-monte-carlo-simulation">What is Monte Carlo Simulation?</h2>
+
+<p>Monte Carlo simulation involves generating a large number of random samples from known probability distributions of input variables. By running simulations many times—often thousands or millions—this method produces a distribution of possible outcomes for a given model or equation. The key steps in this process include:</p>
+
+<ol>
+  <li><strong>Define the Problem</strong>: Identify the variables that introduce uncertainty and their respective probability distributions.</li>
+  <li><strong>Model the System</strong>: Create a mathematical model that relates the uncertain inputs to the desired output.</li>
+  <li><strong>Random Sampling</strong>: Use random sampling techniques to generate values for the uncertain inputs based on their distributions.</li>
+  <li><strong>Run Simulations</strong>: Execute the model using these sampled inputs multiple times to generate a range of possible outcomes.</li>
+  <li><strong>Analyze Results</strong>: Collect and analyze the results to estimate probabilities, means, variances, and other statistical measures of interest.</li>
+</ol>
+
+<h2 id="applications-of-monte-carlo-simulation">Applications of Monte Carlo Simulation</h2>
+
+<p>Monte Carlo simulations are widely used across various disciplines:</p>
+
+<ul>
+  <li><strong>Finance</strong>: To assess risk and uncertainty in investment portfolios by simulating different market conditions.</li>
+  <li><strong>Project Management</strong>: To estimate project timelines and costs by accounting for uncertainties in task durations and resource availability.</li>
+  <li><strong>Engineering</strong>: To evaluate the reliability of systems under varying conditions and to propagate uncertainties through complex models.</li>
+  <li><strong>Scientific Research</strong>: To analyze experimental data where measurement uncertainties are present, allowing researchers to quantify the reliability of their findings.</li>
+</ul>
+
+<h2 id="example-monte-carlo-simulation-in-project-management">Example: Monte Carlo Simulation in Project Management</h2>
+
+<h3 id="scenario">Scenario</h3>
+
+<p>Imagine you are managing a project with three tasks, each having uncertain completion times:</p>
+
+<ul>
+  <li>Task A: Normally distributed with a mean of 5 days and a standard deviation of 1 day.</li>
+  <li>Task B: Uniformly distributed between 4 and 8 days.</li>
+  <li>Task C: Exponentially distributed with a mean of 6 days.</li>
+</ul>
+
+<p>You want to estimate the total project completion time.</p>
+
+<h3 id="steps">Steps</h3>
+
+<ol>
+  <li><strong>Define Probability Distributions</strong>:
+    <ul>
+      <li>Task A: Normal(5, 1)</li>
+      <li>Task B: Uniform(4, 8)</li>
+      <li>Task C: Exponential(6)</li>
+    </ul>
+  </li>
+  <li><strong>Run Simulations</strong>:
+    <ul>
+      <li>Generate random samples for each task’s duration based on their distributions.</li>
+      <li>Sum the durations for each simulation run.</li>
+    </ul>
+  </li>
+  <li><strong>Repeat</strong>:
+    <ul>
+      <li>Repeat this process for, say, 10,000 iterations to create a distribution of total project completion times.</li>
+    </ul>
+  </li>
+  <li><strong>Analyze Results</strong>:
+    <ul>
+      <li>Calculate mean, median, standard deviation, and percentiles (e.g., 90th percentile) from the simulation results.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>By using Monte Carlo simulation in this scenario, you can gain insights into the likely range of project completion times and understand the risks associated with delays. This approach helps in making informed decisions regarding resource allocation and scheduling.</p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

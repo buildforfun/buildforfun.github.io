@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Argparse module | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Argparse module" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Argparse" />
+<meta property="og:description" content="Argparse" />
+<link rel="canonical" href="http://localhost:4000/programming/2025/01/07/argparse/" />
+<meta property="og:url" content="http://localhost:4000/programming/2025/01/07/argparse/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-07T08:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Argparse module" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-07T08:00:00+00:00","datePublished":"2025-01-07T08:00:00+00:00","description":"Argparse","headline":"Argparse module","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2025/01/07/argparse/"},"url":"http://localhost:4000/programming/2025/01/07/argparse/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=69b42ab596a967db42f70bc696c206daadea30fc">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <h1 id="argparse">Argparse</h1>
+
+<p>To effectively use the <code class="language-plaintext highlighter-rouge">argparse</code> module in Python for building command-line interfaces (CLIs), follow these structured steps:</p>
+
+<h2 id="overview-of-argparse">Overview of argparse</h2>
+<p>The <code class="language-plaintext highlighter-rouge">argparse</code> module is a powerful built-in tool in Python that allows you to create user-friendly command-line interfaces. It helps manage command-line arguments, ensuring that your programs can receive input in a structured manner.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="step-1-import-argparse">Step 1: Import argparse</h3>
+<p>Begin by importing the <code class="language-plaintext highlighter-rouge">argparse</code> module at the start of your Python script:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">argparse</span>
+</code></pre></div></div>
+
+<h3 id="step-2-create-an-argumentparser-object">Step 2: Create an ArgumentParser Object</h3>
+<p>Create an instance of <code class="language-plaintext highlighter-rouge">ArgumentParser</code>, which will handle the command-line arguments:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'Description of your program'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="step-3-add-arguments">Step 3: Add Arguments</h3>
+<p>You can add both positional and optional arguments to your parser.</p>
+
+<ul>
+  <li><strong>Positional Arguments</strong>: These are required and are identified by their position in the command line.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'input'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Input file to process.'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Optional Arguments</strong>: These usually start with a hyphen (<code class="language-plaintext highlighter-rouge">-</code>) or double hyphen (<code class="language-plaintext highlighter-rouge">--</code>) and are not mandatory.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-o'</span><span class="p">,</span> <span class="s">'--output'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Output file name'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="step-4-parse-arguments">Step 4: Parse Arguments</h3>
+<p>Once you have defined your arguments, you need to parse them using:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>This method processes the command-line input and stores the values in the <code class="language-plaintext highlighter-rouge">args</code> variable.</p>
+
+<h3 id="step-5-access-parsed-values">Step 5: Access Parsed Values</h3>
+<p>You can access the values of the parsed arguments using dot notation:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Processing file: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="nb">input</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Output will be saved to: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="example-code">Example Code</h2>
+<p>Here’s a complete example that demonstrates how to set up a simple CLI that processes an input file and optionally specifies an output file:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="c1"># Create the argument parser
+</span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'Process some files.'</span><span class="p">)</span>
+
+<span class="c1"># Add positional argument for input file
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'input'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Input file to process.'</span><span class="p">)</span>
+
+<span class="c1"># Add optional argument for output file
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-o'</span><span class="p">,</span> <span class="s">'--output'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Output file name'</span><span class="p">)</span>
+
+<span class="c1"># Parse the command-line arguments
+</span><span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="c1"># Accessing parsed values
+</span><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Processing file: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="nb">input</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Output will be saved to: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<h3 id="subparsers">Subparsers</h3>
+<p>If your application has multiple commands, you can create subparsers:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">subparsers</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">add_subparsers</span><span class="p">(</span><span class="n">dest</span><span class="o">=</span><span class="s">'command'</span><span class="p">)</span>
+
+<span class="c1"># Sub-parser for 'add'
+</span><span class="n">add_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="p">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s">'add'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Add two numbers.'</span><span class="p">)</span>
+<span class="n">add_parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'First number.'</span><span class="p">)</span>
+<span class="n">add_parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'y'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Second number.'</span><span class="p">)</span>
+
+<span class="c1"># Sub-parser for 'subtract'
+</span><span class="n">subtract_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="p">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s">'subtract'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Subtract two numbers.'</span><span class="p">)</span>
+<span class="n">subtract_parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'First number.'</span><span class="p">)</span>
+<span class="n">subtract_parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'y'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Second number.'</span><span class="p">)</span>
+
+<span class="c1"># Parse the arguments
+</span><span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="help-messages">Help Messages</h3>
+<p>The <code class="language-plaintext highlighter-rouge">argparse</code> module automatically generates help messages. You can display them by running your script with the <code class="language-plaintext highlighter-rouge">-h</code> or <code class="language-plaintext highlighter-rouge">--help</code> option:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python script.py <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>This will provide a summary of all available arguments and their descriptions.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Using <code class="language-plaintext highlighter-rouge">argparse</code> allows you to create robust command-line applications in Python. By following these steps, you can effectively handle user input and provide clear usage instructions. For further exploration, consider looking into additional features such as argument types, default values, and custom error messages.</p>
+
+<p>Citations:
+[1] https://www.cherryservers.com/blog/how-to-use-python-argparse
+[2] https://thepythoncode.com/article/how-to-use-argparse-in-python
+[3] https://realpython.com/command-line-interfaces-python-argparse/
+[4] https://training.galaxyproject.org/training-material/topics/data-science/tutorials/python-argparse/tutorial.html</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">argparse</code> module in Python provides a wide array of parameters to customize the behavior of command-line argument parsing. Here’s a comprehensive overview of useful parameters you can use with <code class="language-plaintext highlighter-rouge">add_argument()</code>:</p>
+
+<h2 id="common-parameters-for-add_argument">Common Parameters for <code class="language-plaintext highlighter-rouge">add_argument()</code></h2>
+
+<ol>
+  <li><strong>name or flags</strong>:
+    <ul>
+      <li>The name of the argument, or a list of option strings (e.g., <code class="language-plaintext highlighter-rouge">'-f'</code>, <code class="language-plaintext highlighter-rouge">'--flag'</code>).</li>
+      <li>Positional arguments can be specified by just their name.</li>
+    </ul>
+  </li>
+  <li><strong>type</strong>:
+    <ul>
+      <li>Specifies the type to which the command-line argument should be converted (e.g., <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">str</code>). This ensures that the input is correctly interpreted.</li>
+    </ul>
+  </li>
+  <li><strong>help</strong>:
+    <ul>
+      <li>A brief description of the argument, which is displayed when using the <code class="language-plaintext highlighter-rouge">-h</code> or <code class="language-plaintext highlighter-rouge">--help</code> option.</li>
+    </ul>
+  </li>
+  <li><strong>default</strong>:
+    <ul>
+      <li>The default value for the argument if it is not provided by the user.</li>
+    </ul>
+  </li>
+  <li><strong>required</strong>:
+    <ul>
+      <li>A boolean indicating whether the argument must be provided (True) or not (False). If set to True and the argument is missing, an error will be raised.</li>
+    </ul>
+  </li>
+  <li><strong>nargs</strong>:
+    <ul>
+      <li>Defines how many command-line arguments should be consumed. Common options include:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">N</code>: Exact number of arguments.</li>
+          <li><code class="language-plaintext highlighter-rouge">'?'</code>: Zero or one argument.</li>
+          <li><code class="language-plaintext highlighter-rouge">'*'</code>: Zero or more arguments.</li>
+          <li><code class="language-plaintext highlighter-rouge">'+'</code>: One or more arguments.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>choices</strong>:
+    <ul>
+      <li>A sequence specifying valid values for the argument. If the user provides a value outside this sequence, an error will be raised.</li>
+    </ul>
+  </li>
+  <li><strong>action</strong>:
+    <ul>
+      <li>Specifies how to handle the command-line argument. Common actions include:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">'store'</code>: Store the value (default).</li>
+          <li><code class="language-plaintext highlighter-rouge">'store_true'</code>: Store <code class="language-plaintext highlighter-rouge">True</code> if the option is specified; otherwise, store <code class="language-plaintext highlighter-rouge">False</code>.</li>
+          <li><code class="language-plaintext highlighter-rouge">'store_false'</code>: Store <code class="language-plaintext highlighter-rouge">False</code> if the option is specified; otherwise, store <code class="language-plaintext highlighter-rouge">True</code>.</li>
+          <li><code class="language-plaintext highlighter-rouge">'append'</code>: Append the value to a list.</li>
+          <li><code class="language-plaintext highlighter-rouge">'count'</code>: Count how many times an option is specified.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>dest</strong>:
+    <ul>
+      <li>The name of the attribute to be added to the object returned by <code class="language-plaintext highlighter-rouge">parse_args()</code>. This can be useful if you want to change the name from what was provided in the command line.</li>
+    </ul>
+  </li>
+  <li><strong>metavar</strong>:
+    <ul>
+      <li>A string that specifies what should be displayed in usage messages instead of the actual name of the argument.</li>
+    </ul>
+  </li>
+  <li><strong>const</strong>:
+    <ul>
+      <li>A constant value that will be used if the option is specified without a value (commonly used with action=’store_const’).</li>
+    </ul>
+  </li>
+  <li><strong>prefix_chars</strong>:
+    <ul>
+      <li>A string defining characters that signify options; this allows customization beyond just hyphens (<code class="language-plaintext highlighter-rouge">-</code>).</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="example-usage">Example Usage</h2>
+<p>Here’s an example demonstrating some of these parameters:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'Example script using argparse.'</span><span class="p">)</span>
+
+<span class="c1"># Adding various types of arguments
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'input'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Input file path'</span><span class="p">)</span>
+<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-o'</span><span class="p">,</span> <span class="s">'--output'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s">'output.txt'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Output file path'</span><span class="p">)</span>
+<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--verbose'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Increase output verbosity'</span><span class="p">)</span>
+<span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--count'</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Number of times to repeat'</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Input: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="nb">input</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Output: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">output</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Verbose: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">verbose</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Count: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">count</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In this example:</p>
+<ul>
+  <li>The positional argument <code class="language-plaintext highlighter-rouge">input</code> is required.</li>
+  <li>The optional argument <code class="language-plaintext highlighter-rouge">--output</code> has a default value.</li>
+  <li>The flag <code class="language-plaintext highlighter-rouge">--verbose</code> will store <code class="language-plaintext highlighter-rouge">True</code> if specified.</li>
+  <li>The parameter <code class="language-plaintext highlighter-rouge">--count</code> expects an integer input with a default value.</li>
+</ul>
+
+<p>By utilizing these parameters effectively, you can create flexible and user-friendly command-line interfaces in your Python applications.</p>
+
+<p>Citations:
+[1] https://realpython.com/command-line-interfaces-python-argparse/
+[2] https://www.cherryservers.com/blog/how-to-use-python-argparse
+[3] https://stackoverflow.com/questions/7427101/simple-argparse-example-wanted-1-argument-3-results
+[4] https://pymotw.com/2/argparse/
+[5] https://python.readthedocs.io/en/stable/library/argparse.html</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">action</code> parameter in the <code class="language-plaintext highlighter-rouge">argparse</code> module defines how command-line arguments should be processed when they are encountered. Here’s a detailed overview of the available actions:</p>
+
+<h2 id="common-actions-in-argparse">Common Actions in argparse</h2>
+
+<ol>
+  <li><strong>store</strong>:
+    <ul>
+      <li>This is the default action. It stores the value provided by the command line as a variable.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--name'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Store the name'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>store_true</strong>:
+    <ul>
+      <li>This action stores <code class="language-plaintext highlighter-rouge">True</code> if the argument is present, otherwise it stores <code class="language-plaintext highlighter-rouge">False</code>. It’s useful for flags.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--verbose'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Enable verbose output'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>store_false</strong>:
+    <ul>
+      <li>The opposite of <code class="language-plaintext highlighter-rouge">store_true</code>; it stores <code class="language-plaintext highlighter-rouge">False</code> if the argument is present and <code class="language-plaintext highlighter-rouge">True</code> otherwise.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--no-debug'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_false'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Disable debug mode'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>store_const</strong>:
+    <ul>
+      <li>This action stores a constant value specified by the <code class="language-plaintext highlighter-rouge">const</code> parameter when the argument is encountered.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--mode'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_const'</span><span class="p">,</span> <span class="n">const</span><span class="o">=</span><span class="s">'debug'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Set mode to debug'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>append</strong>:
+    <ul>
+      <li>This action appends the argument value to a list each time the argument is encountered, allowing multiple values to be collected.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-a'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'append'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Add multiple values'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>append_const</strong>:
+    <ul>
+      <li>Similar to <code class="language-plaintext highlighter-rouge">append</code>, but it appends a constant value specified by the <code class="language-plaintext highlighter-rouge">const</code> parameter to a list.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--add-const'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'append_const'</span><span class="p">,</span> <span class="n">const</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Append constant value 42'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>count</strong>:
+    <ul>
+      <li>This action counts how many times the argument is specified and stores that count as an integer. It’s useful for verbosity levels.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-v'</span><span class="p">,</span> <span class="s">'--verbose'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'count'</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Increase verbosity level'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>version</strong>:
+    <ul>
+      <li>This action prints the version information of the program and exits.</li>
+      <li>Example:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--version'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'version'</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s">'%(prog)s 1.0'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Show program version'</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="example-code-demonstrating-actions">Example Code Demonstrating Actions</h2>
+
+<p>Here’s an example that illustrates various actions:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'Example of argparse actions.'</span><span class="p">)</span>
+
+<span class="c1"># Store a simple value
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--name'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Store a name'</span><span class="p">)</span>
+
+<span class="c1"># Store a boolean flag
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--verbose'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Enable verbose output'</span><span class="p">)</span>
+
+<span class="c1"># Store a constant value
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'--mode'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'store_const'</span><span class="p">,</span> <span class="n">const</span><span class="o">=</span><span class="s">'debug'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Set mode to debug'</span><span class="p">)</span>
+
+<span class="c1"># Append values to a list
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-a'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'append'</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Add multiple values'</span><span class="p">)</span>
+
+<span class="c1"># Count occurrences of an argument
+</span><span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-v'</span><span class="p">,</span> <span class="s">'--verbosity'</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s">'count'</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">'Increase verbosity level'</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Name: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Verbose: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">verbose</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Mode: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">mode</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Values: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">a</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Verbosity Level: </span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">verbosity</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="running-the-example">Running the Example</h3>
+
+<p>You could run this script with various arguments:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python script.py <span class="nt">--name</span> Alice <span class="nt">--verbose</span> <span class="nt">--mode</span> <span class="nt">--mode</span> <span class="nt">-a</span> item1 <span class="nt">-a</span> item2 <span class="nt">-v</span> <span class="nt">-v</span>
+</code></pre></div></div>
+
+<p>This would yield output similar to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name: Alice
+Verbose: True
+Mode: debug
+Values: ['item1', 'item2']
+Verbosity Level: 2
+</code></pre></div></div>
+
+<p>By utilizing these actions, you can create flexible and user-friendly command-line interfaces that respond appropriately based on user input.</p>
+
+<p>Citations:
+[1] https://pymotw.com/2/argparse/
+[2] https://realpython.com/command-line-interfaces-python-argparse/
+[3] https://stackoverflow.com/questions/19124304/what-does-metavar-and-action-mean-in-argparse-in-python
+[4] https://docs.python.org/ja/3.12/howto/argparse.html
+[5] https://python.readthedocs.io/en/stable/library/argparse.html</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

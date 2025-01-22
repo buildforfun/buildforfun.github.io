@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bash | Buildforfun blog posts!</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bash" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To create a Bash file that runs a Python script, follow these steps:" />
+<meta property="og:description" content="To create a Bash file that runs a Python script, follow these steps:" />
+<link rel="canonical" href="http://localhost:4000/programming/2025/01/09/bash/" />
+<meta property="og:url" content="http://localhost:4000/programming/2025/01/09/bash/" />
+<meta property="og:site_name" content="Buildforfun blog posts!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-09T08:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bash" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-09T08:00:00+00:00","datePublished":"2025-01-09T08:00:00+00:00","description":"To create a Bash file that runs a Python script, follow these steps:","headline":"Bash","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2025/01/09/bash/"},"url":"http://localhost:4000/programming/2025/01/09/bash/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=69b42ab596a967db42f70bc696c206daadea30fc">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Buildforfun blog posts!</a></h1>
+      
+
+      <p>To create a Bash file that runs a Python script, follow these steps:</p>
+
+<h2 id="step-1-create-your-python-script">Step 1: Create Your Python Script</h2>
+<p>First, you need to write your Python script. For example, create a file named <code class="language-plaintext highlighter-rouge">myscript.py</code> using a text editor like <code class="language-plaintext highlighter-rouge">nano</code> or <code class="language-plaintext highlighter-rouge">vi</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano myscript.py
+</code></pre></div></div>
+
+<p>In this file, you can write a simple Python script. For instance:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># myscript.py
+</span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This script prints a greeting based on the command-line argument provided.</p>
+
+<h2 id="step-2-create-your-bash-script">Step 2: Create Your Bash Script</h2>
+<p>Next, create a Bash script that will execute your Python script. Open a new file named <code class="language-plaintext highlighter-rouge">run_pyscript.sh</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano run_pyscript.sh
+</code></pre></div></div>
+
+<p>Add the following content to this file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># Change to the directory containing the Python script (optional)</span>
+<span class="nb">cd</span> /path/to/your/script/directory
+
+<span class="c"># Run the Python script with an argument</span>
+python3 myscript.py <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Make sure to replace <code class="language-plaintext highlighter-rouge">/path/to/your/script/directory</code> with the actual path where your Python script is located.</p>
+
+<h2 id="step-3-make-the-bash-script-executable">Step 3: Make the Bash Script Executable</h2>
+<p>Before running your Bash script, you need to make it executable. Use the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x run_pyscript.sh
+</code></pre></div></div>
+<p>or 
+sudo chmod +x your_script.sh</p>
+
+<h2 id="step-4-run-your-bash-script">Step 4: Run Your Bash Script</h2>
+<p>Now you can run your Bash script from the terminal and pass an argument to it. For example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./run_pyscript.sh John
+</code></pre></div></div>
+
+<p>This command will output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, John!
+</code></pre></div></div>
+
+<p>If no argument is provided, it will simply output “Hello, World!” as defined in the Python script.</p>
+
+<h2 id="summary-of-key-points">Summary of Key Points</h2>
+<ul>
+  <li><strong>Create a Python script</strong> that performs the desired functionality.</li>
+  <li><strong>Write a Bash script</strong> that calls the Python script using the appropriate interpreter (e.g., <code class="language-plaintext highlighter-rouge">python3</code>).</li>
+  <li><strong>Make the Bash script executable</strong> with <code class="language-plaintext highlighter-rouge">chmod +x</code>.</li>
+  <li><strong>Run the Bash script</strong>, passing any necessary arguments.</li>
+</ul>
+
+<p>This integration allows you to leverage both Bash and Python capabilities effectively for automation and scripting tasks in a Linux environment.</p>
+
+<p>Citations:
+[1] https://linuxconfig.org/how-to-use-a-bash-script-to-run-your-python-scripts
+[2] https://www.askpython.com/python/examples/python-scripts-with-bash
+[3] https://www.codementor.io/@chirilovadrian360/using-bash-and-python-together-with-samples-28jpip8vmu
+[4] https://www.baeldung.com/linux/python-run-bash-command
+[5] https://python.land/the-unix-shell/creating-bash-scripts</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
