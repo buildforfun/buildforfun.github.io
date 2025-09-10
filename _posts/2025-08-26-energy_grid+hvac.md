@@ -1,0 +1,257 @@
+---
+title: Global warming
+date: 2025-08-25 01:02:00
+---
+
+# What does the UK energy grid look like?
+
+If we see the UK as an energy balance where the energy generated has to be used by demand we can begin to understand the flow of energy in the UK.
+
+Let's start with the demand that the UK has, this can be largely broken into 4 major sectors: Domestic sector, Transport sector, Industrial sector and Services sector.
+
+**Domestic sector**
+The domestic sector is the mainly the energy used for space and water heating of homes. A smaller proportion is lighting, appliances and cooking.<br>
+Energy source: mains gas for heating, electricity for lighting and appliances
+
+**Transport sector**
+The main use in transport is oil (petroleum product) for road transport then air transport and lastly maritime transport. The growing demand is electricity for electric vehicles. <br>
+Energy source: mainly oil
+
+**Industrial sector**
+The industrial sector is made up of manufacturing processes and chemical and food processing. The sector also uses energy for raw material extraction and processing for use.<br>
+Energy source: gas, electricity
+
+**Services sector**
+The services sector uses energy in  HVAC, lighting, ICT (information and communication technology), electronics and refrigeration. <br>
+Energy source: gas, electricity
+
+<img src="/assets/energy_mix.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+From the different sectors we can see the main energy sources are Electricity, gas and oil. The electricity is split approximately equally between domestic, industrial and service sector.  Gas is the dominant source for domestic heating in the UK.
+
+To meet this demand the UK has a variety of energy sources for electricity generation:<br>
+**Wind**
+There are two types of wind generation: onshore and offshore which is approx split evenly.
+
+**Solar**
+There is domestic and commercial solar panels. On the domestic side there are solar PV to generate electricity and solar thermal to directly heat water.
+
+**Hydroelectric**
+Hydroelectric is a small component of the UK energy mix.
+
+**Gas**
+The last coal fired power station closed in 2024. Now gas is the main fossil fuel that powers the UK. UK produces about half of it's gas from the North Sea and imports the other half.
+
+**Nuclear**
+Most of existing reactors are set to retire by 2030, but there are plans to expand the nuclear reactors.
+
+**Biomass**
+Biomass has struggled to get enough supply and has sourced wood from abroad which doesn't make it as sustainable.
+
+
+**Sources:**
+https://grid.iamkate.com
+https://assets.publishing.service.gov.uk/media/67b896baba253db298782c43/Energy_Consumption_in_the_UK_2024_methodology_note.pdf 
+
+
+---
+title: "HVAC systems"
+date: 2025-08-25 01:00:00
+---
+## How do boilers work?
+1. Natural Gas delivery
+    - Natural gas is sourced, extracted, and delivered to buildings through an extensive network of pipelines that cover long distances.
+2. Combustion chamber
+    - Once the gas is inside the building, it’s transported to the boiler’s combustion chamber where the combustion process is carried out.
+    - When natural gas is mixed with oxygen and ignited, it creates a flame, and thus the desired heat.
+    - The process also creates waste gases in the form of hot water vapour and carbon dioxide.
+    - Most modern combi boilers feature a modulating burner which can adjust its output for the demand.
+    - The heat created by flame is transmitted to the primary heat exchanger.
+3. Primary heat exchanger
+    - The primary heat exchanger consists of copper pipes which carry water in parallel lines to capture as much of the heat from the gases as possible.
+4. Circulation pump
+    - An electric circulation pump circulates the water throughout the heating system.
+5. Space heating
+    - For space heating, hot water flows into the radiators when Thermostatic radiator valves (TRVs) are turned up.
+    - The water, having released heat into the room, returns to the boiler at a lower temperature.
+6. Diverter valve
+    - When the hot water is needed, the diverter valve redirects hot water from the primary heat exchanger to the secondary heat exchanger for hot water production. Priority is given to delivering hot water over space heating.
+7. Secondary heat exchanger
+    - Hot water is delivered by the secondary heat exchanger. In condensing boilers, the flue gases are passed over a secondary heat exchanger, recovering additional heat from the combustion process.
+    - Mains Cold water is fed into the secondary heat exchanger, heated by flue gases and hot water from the primary heat exchanger and then delivered to the taps.
+8. Flue
+    - Cold exhaust gases are vented through the flue pipe
+
+<img src="/assets/boiler_diagram.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+
+# How do heat pumps work?
+
+Let's start from the fundamentals to understand how a heat pump works. Beginning with the **First law of thermodynamics** which states energy cannot be created or destroyed, it can only be transferred. It can also expressed as: 
+ΔU = Qnet - W
+Where:
+- ΔU is the change in internal energy 
+- Qnet is the net heat added to the system 
+- W is the work done by the system
+
+A basic diagram of the flow of energy for heat pumps:
+<img src="/assets/heat_pump_basic_diagram.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+The equation for the first law of thermodynamics can be modified for heat pumps:
+- Work is done on the system by a compressor to transfer heat from a cold environment to a hot environment. Therefore, the work term becomes positive: -(-W).
+- At the end of a cycle the heat pump returns to the same state as at the beginning, so the change in internal energy in one cycle is zero: ΔU = 0
+- Qnet = Qcold - Qhot where Qcold is energy from cold environment and Qhot is the heat delivered to hot environment
+
+To get the performance of a heat pump we care about Qhot relative to the W we put in. If we substitute the work equation we found earlier 
+<img src="/assets/COPhp_basic.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+Now we have the equation for the COP of heat pumps let's turn to the second law of thermodynamics. The second law of thermodynamics states **Heat will not spontaneously flow from a lower temperature to a higher temperature.** This means that heat flows from hot to cold unless some energy is inputted which is what a heat pump does.
+
+The Carnot COP is the maximum COP that a heat pump can achieve in a given environment. We can understand this by looking at the reversed Carnot cycle which is applicable for heat pumps. The reversed carnot cycle consists of four reversible processes:
+1. **Isothermal Expansion**
+    - Gas absorbs heat from cold environment -> Entropy increases
+    - Isothermal process is where the temperature remains constant 
+2. **Adiabatic Compression**
+    - Gas is compressed, heating up gas. No heat transfer -> Entropy remains constant.
+    - Adiabatic is a process with no heat transfer
+3. **Isothermal Compression**
+    - Gas releases heat Qhot to the hot environment -> Entropy decreases
+    - Work is done on the system during compression
+4. **Adiabatic Expansion**: 
+    - Gas expands, cooling to the cold environment temperature -> entropy remains constant. Temperature drops
+
+<img src="/assets/carnot_hp_cycle.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+For a reversible cycle, the net entropy change of the system and environment is zero. This is because the system returns to its initial state after one full cycle, so its net entropy change is zero. **Entropy gained by the environment** equals **entropy lost by the system**.
+
+<img src="/assets/carnot_equations.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+We can then put this in the equation we derived earlier to get the Carnot COP.  This is the maximum theoretical efficiency a heat pump can achieve.
+<img src="/assets/carnot_equations.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+In reality, the Carnot COP is hardly achieved due to: 
+- Friction losses in mechanical parts
+- Heat loss from case
+- Refrigerant losses
+- Part load operation - cycling drops efficiency due to stop starts  
+- Heat exchanger area - larger exchangers improve efficiency
+- Defrost cycles needed
+- Pumps and Fans require additional electrical input
+
+This is why standardised lab tests are conducted to find out the real performance of heat pumps in a range of conditions. For example, in Europe the EN 14825 is done. The EN 14825 calculates COP at different outdoor temperatures ( -7°C, +2°C, +7°C, +12°C) and part-load ratios (88%, 54%, 35%, 15% of design heating demand) at temperature profiles for average, warmer, and colder climates.
+
+We can also understand the heat pumps from the actual components:
+
+ 1. **Refrigerant**
+- Heat pumps operate using a special fluid called the refrigerant. What’s unique about refrigerants is that it boils at very low temperatures. This characteristic allows the capture of energy even from low temperatures. The refrigerant begins as a low pressure, low temperature liquid, which is directed to the evaporator.
+
+ 2. **Evaporator**
+- The evaporator, a heat exchanger, interacting with outside air for air source heat pumps, causes the refrigerant to boil as ambient air passes over it, transforming the refrigerant into a low temperature cold vapour. As the liquid boils it gains energy from the outside air, causing it to evaporate into a gas. This vapour is then carried to the compressor. They also have a fan to ensure airflow over the heat exchanger.
+
+ 3. **Compressor**
+- Before the compressor works, a reversing valve or a 4 way valve is used to switch between heating and cooling. It allows the flow to reversed when needed e.g. defrost it reverses to melt ice on the evaporator. 
+- The compressor uses electricity to increase the pressure of the refrigerant which causes the temperature to rise. The high pressure high temperature vapour is then taken to the condenser. 
+
+ 4. **Condenser**
+- The condenser is a heat exchanger, which releases energy to the water in the storage tank. During this process, the refrigerant undergoes condensation, releasing energy and transforming into a liquid.
+- The refrigerant then passes out the storage tank and to the expansion vessel.
+
+ 5. **Expansion vessel**
+- The expansion vessel drops the pressure, leading to a drop in temperature. The now low pressure, low temperature liquid repeats the cycle by returning to the evaporator.
+
+<img src="/assets/heat_pump_diagram.png" alt="Alt text" style="max-width: 100%; height: auto;" />    
+
+## Adoption of heat pumps in the UK
+
+**Why do we want to install heat pumps in the UK?**<br>
+Approximately 75% of the UK housing stock is heated by mains gas boilers. The gas comes from natural gas produced from the North Sea and imported gas. The UK is looking to reduce it's reliance on fossil fuels as part of it's 2050 net zero emission target, to do this UK is increasing it's the renewable energy generation. As the grid becomes more decarbonised the clean electricity that is produced will need to be used in homes to reduce emissions and this is only possible if the heating systems in the homes are powered off electricity not gas. This is where the electrically driven heat pumps come in. Heat pumps work by extracting energy from sources like air, ground and water and transfer it to homes for space or water heating. By transferring the energy from natural sources, it allows the heat pump to deliver more energy than it uses - this is also what allows heat pumps to be typically three times more efficient than gas boilers.
+
+**What is the current status of heat pump installs?**<br>
+The UK has approximately 250,000 certified heat pumps installed in the UK. In 2024, there was approximately 60,000 heat pump installs carried out. The UK government has an aim to install 600,000 heat pumps annually in 2028 as part of the Energy Security Bill. France for comparison installed 620,000 heat pumps in 2022.
+
+**What are the main challengers to achieving 600,000 annual installs?**<br>
+There are three main challenges in installing heat pumps in the UK:
+- High upfront cost to replace gas boilers
+- Low running cost savings compared to gas boilers
+- Skilled work force - not enough qualified heat pump installers
+
+If we look at each of these:
+
+**High upfront costs**<br>
+The total cost of installing a heatpump can range from £10,000 to £18000 depending on house type, type of heat pump and specific install requirements. To incentivise people to install heat pumps, the government is offering £7,500 towards installing heat pumps in England and Wales as part of the Boiler Upgrade Scheme (BUS).
+
+**Low running costs savings**<br>
+If we take a house that has 10,000 kWh demand. A condensing gas boiler is typically 90% efficiency and the cost for gas in the UK April 2025 is approx 7p/kWh. This means the cost of meeting the demand with the gas boiler is: 10,000 kWh/0.9 * 7p/kWh = £777
+
+A heat pump typically has a COP of 3 and the cost of electricity in the UK April 2025 is approx 27p/kWh. The cost of meeting this house's demand with the heat pump is: 10,000kWh/3 * 27p/kWh = £900
+
+This shows currently it's more expensive to run heat pumps. However, the cost of electricity will fall as the grid is powered off more renewables. The cost of gas may also go up as natural sources become depleted. It is also worth noting, there are  heat pumps that have a COP of more than 3, this may make them cheaper than the example above.
+
+**Skilled workforce**<br>
+In 2023, there were 7,800 qualified heat pump engineers, the heat pump association (HPA) estimates 27,000 will be needed in 2028.  The UK government is offering £500 grants through the heat training grant to train heating engineers to become qualified heat pump installers.
+
+**Sources:**<br>
+https://news.net-zeroclub.co.uk/2025/03/17/uk-hvac-heat-pump-skills-shortage-future-solutions-ahead/<br>
+https://www.gov.uk/government/publications/heat-training-grant-for-heat-pumps<br>
+https://www.edie.net/mcs-2024-broke-records-for-rooftop-solar-and-heat-pump-installations/#:~:text=Installations%20soared%2043%25%20year%2Don,boiler%20with%20a%20heat%20pump.<br>
+https://www.heatpumps.london/blog/everything-you-need-to-know-about-heat-pumps
+https://energy-efficient-home.campaign.gov.uk/heat-pump/<br>
+https://www.apex-surveys.co.uk/post/what-is-the-real-cost-of-installing-an-air-source-heat-pump-in-2025
+
+
+## How do mechanical ventilation systems work?
+The main types of continuous mechanical ventilation systems are:
+
+- Centralised Mechanical Extract Ventilation (MEV)
+- Centralised Mechanical Ventilation with Heat Recovery (MVHR)
+- Decentralised Mechanical Extract Ventilation (dMEV)
+- Decentralised Mechanical Ventilation with Heat Recovery (dMVHR)
+
+**Centralised Mechanical Extract Ventilation (MEV)**
+
+MEV is an extract ventilation system that operates continuously at a low air flow rate. It operates by removing stale air out of wet rooms (bathrooms and kitchen). Fresh air enters the dwelling via air bricks, window vents and gaps in the dwelling.
+
+**Mechanical Ventilation with Heat Recovery (MVHR)**
+
+While MEV systems extract stale air and expel it outside, MVHR recover the heat from the stale air and use it to prewarm fresh air entering the house.
+
+1. Fresh air
+    - The process begins with fresh outdoor air entering the house which gets filtered to remove impurities. The air is taken to the heat exchanger.
+2. Heat exchanger
+    - The heat exchanger is the main component of the MVHR, this is where the fresh air is preheated using heat from the extract air.
+    - The preheated air is passed through a fan that pushes the air to a heating coil which heats up the prewarmed air to the desired temperature. This uses less energy as the air is warmer than the outdoor temperature that would have been used.
+    - The control system determines the fan speeds based on data about the indoor air quality, temperature and humidity.
+3. Supply air
+    - The conditioned supply air then channelled through the ductwork into various rooms via vents.
+4. Extract air
+    - Stale warm air is then extracted from wet rooms to the heat exchanger.
+    - The heat from the stale warm air that would have otherwise been wasted is recovered when it is passed through the heat exchanger.
+5. Exhaust air
+    - The now cold and stale air is expelled from the building using a dedicated exhaust fan.
+
+<img src="/assets/MVHR.png" alt="Alt text" style="max-width: 100%; height: auto;" />
+
+
+**Decentralised Mechanical Extract Ventilation (dMEV)**
+
+dMEV systems work similarly to centralised MEV, the main difference is that separate fans are installed directly in the wet rooms instead of one centralised unit.
+
+**Decentralised Mechanical Ventilation with Heat Recovery (dMVHR)**
+
+dMVHR are similar to dMEV, the difference being the stale air from wet rooms is passed over a heat exchanger and the heat energy is passed to the fresh air entering the dwelling.
+
+**Centralised MEV Systems**
+
+- Have a single central extractor fan unit mounted in the loft or a cupboard.
+- The central unit is connected via ductwork to extract air from multiple wet rooms like bathrooms, kitchens, and utility rooms.
+- Air is drawn from these rooms through ducts installed in the walls and expelled outside through a single vent.
+- Provide simultaneous extraction from up to 6 wet rooms.
+- Require proper ducting installation throughout the property.
+
+**Decentralised MEV Systems**
+
+- Have multiple individual extractor fans installed directly in each wet room.
+- No ductwork is required as each fan extracts air directly from that room.
+- Fans are usually mounted on the wall or ceiling of the wet room.
+- Each room's extraction is independent and not connected to a central unit.
+- Offer more flexibility in installation as no ducting is needed.
+
