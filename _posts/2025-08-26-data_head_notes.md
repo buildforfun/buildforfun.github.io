@@ -1,5 +1,8 @@
+---
+title:  Book notes: Data head
+---
 
-
+# Book notes: Data head
 
 Where did the data originate 
 How was the data collected?

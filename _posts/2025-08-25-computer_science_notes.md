@@ -1,6 +1,4 @@
-# cs_notes
-
-# My Computer science notes
+# Computer science notes
 
 Please be aware, these are pretty rough notes!
 

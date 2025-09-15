@@ -1,7 +1,8 @@
 ---
-title: "Understanding the english language"
+title: "English language"
 ---
-# Understanding the human languages
+
+
 Grammer is the structure of a language. It's the way you put the building blocks together.
 - Phrase: group of words that act as single part of a speech
     - Noun phrase (noun is a person, plaace or thing) phrase that acts like a noun. 
