@@ -1,3 +1,9 @@
+---
+title: Heat transfer
+date: 2025-08-25 01:02:00
+categories: bem
+---
+
 # How heat transfer works
 
 ## What is Energy?

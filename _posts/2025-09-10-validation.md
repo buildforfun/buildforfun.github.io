@@ -1,4 +1,7 @@
-
+---
+title: Model validation
+categories: bem
+---
 # Model validation
 
 What is validation of a model?

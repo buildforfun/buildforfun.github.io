@@ -1,6 +1,7 @@
 ---
 title: Book notes - other
 date: 2025-08-25 00:30:00
+categories: book
 ---
 # Book notes: other
 

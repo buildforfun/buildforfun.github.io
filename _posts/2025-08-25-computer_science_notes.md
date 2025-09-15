@@ -1,5 +1,6 @@
 ---
 title: Computer science
+categories: comp
 ---
 Please be aware, these are pretty rough notes!
 

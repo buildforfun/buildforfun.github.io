@@ -1,5 +1,8 @@
-
-# Databases: 
+---
+title: Databases
+categories: comp
+---
+# Databases
 
 What is a database?
 

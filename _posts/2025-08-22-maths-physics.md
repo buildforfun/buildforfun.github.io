@@ -2,6 +2,7 @@
 layout: post
 title:  "Introduction to Maths and Physics"
 date:   2025-08-23 10:00:00
+categories: foundation
 ---
 
 In school, I never really understood physics deeply. Sure I was capable of manipulating equations to get the answer, but I never really understood it clearly.  This post is to help me understand the high level areas of physics. I plan on adding more content over time.

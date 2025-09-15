@@ -1,5 +1,6 @@
 ---
 title:  Book notes Data head
+categories: book
 ---
 
 # Book notes: Data head

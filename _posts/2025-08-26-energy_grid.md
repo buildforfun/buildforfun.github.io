@@ -1,6 +1,7 @@
 ---
 title: Global warming
 date: 2025-08-25 01:02:00
+categories: bem
 ---
 
 # What does the UK energy grid look like?

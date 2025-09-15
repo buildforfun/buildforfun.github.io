@@ -1,4 +1,8 @@
-
+---
+title: How to Read
+date: 2025-08-25 01:02:00
+categories: book
+---
 - Passive or active reading 
 - Demands more of the text 
 - Art of catching balls from the writer 
