@@ -1,5 +1,6 @@
-# Computer science notes
-
+---
+title: Computer science
+---
 Please be aware, these are pretty rough notes!
 
 As as self-taught programmer, I often feel like I lack a sense of fundamental
