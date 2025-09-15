@@ -1,0 +1,308 @@
+<p>Please be aware, these are pretty rough notes!</p>
+
+<p>As as self-taught programmer, I often feel like I lack a sense of fundamental
+knowledge in programming. I understand some bits and can put together code, but
+it’s often not the complete picture. This post is intended as a reference for
+me if i forget the basics, I can come back here to re-read or add to my core
+knowledge.</p>
+
+<h2 id="what-is-computer-science">What is computer science?</h2>
+<p>Is the study of using computers to solve problems. It’s made up of:</p>
+<ol>
+  <li>Computing systems</li>
+  <li>Algorithms and programming</li>
+  <li>Data and analysis</li>
+  <li>Networks and the internet</li>
+</ol>
+
+<h2 id="computers">Computers</h2>
+
+<p>When I was litte, I had a small dream of building my own PC. I still haven’t commited yet, but I thought it’ll be worth learning how anyway. I might even try to build a budget PC just for fun. I  might even try and make a budget PC for kicks. So how do you build one? Like many problems, it’s best to break it down into smaller parts. What components make up a computer?</p>
+<ul>
+  <li>Computer Processing unit (CPU)</li>
+  <li>Motherboard</li>
+  <li>Graphical Processing Unit (GPU)</li>
+  <li>Case</li>
+  <li>Power supply unit (PSU)</li>
+  <li>Storage</li>
+  <li>Random Access Memory (RAM)</li>
+</ul>
+
+<p>We will ignore other input/output devices like monitors, keyboards, etc because we are focusing on the computer itself.</p>
+
+<p>The motherboard is like the skeleton and muscular structure of the PC, connecting all the “thinking” units together. Motherboards comes in three different sizes: ITX, Micro ATX and ATX. There are two main motherboard families based on CPU brand: AMD and Intel. 
+Intel</p>
+<ul>
+  <li>Intel sockets: LGA 1700, LGA 1851</li>
+  <li>AMD sockets: AM4, AM5</li>
+</ul>
+
+<p>The CPU is the brain of the computer, responsible for general-purpose computing. It contains billions of transistors, which act as tiny switches representing binary data (1 and 0). The CPU performs tasks in multiple steps:</p>
+<ol>
+  <li>fetching - control unit receives instruction from memory</li>
+  <li>decoding - control interprets the instruction</li>
+  <li>execution - ALU performs calculation</li>
+  <li>repeating 1-3
+The CPU’s speed, measured in gigahertz(GHz) indictes how many instructions the CPU can perform in a second. More cores mean you can do multiple tasks at once. Remember, the CPU must be compatible with your chosen motherboard.</li>
+</ol>
+
+<p>The GPU renders images and videos. It has many cores and dedicated memory for processing graphics, making it excellent at parallel processing. Popular GPU brands are NVIDIA, AMD and Intel.</p>
+
+<p>RAM comes in sizes like 4gb, 8gb, 16gb, and 32gb, and it is esssential for temporary data storage during active tasks.</p>
+
+<p>The PSU converts electrical power from your home’s AC outlet into direct current(DC) that your PC components require. Effeciency is important because it determins how much power is converted to DC.</p>
+
+<p>For storage, Solid state drive (SSD) use flash memory to store data even when  power is off. Unlike hard drives, SSDs have no moving parts, making them faster and more durable.</p>
+
+<p>Case sizes come in sizes coressponding to the motherboard form factors, suchas  micr-ATX, ATX and E-ATX.</p>
+
+<p>A computer stores, shares and analyses huge amounts of information and is
+capable of carrying out complex calculations.</p>
+
+<p>Hardware
+There are input devices (mouse, keyboard), storage devices (USB, RAM),
+processing (CPU, GPU) and Output (display, speakers).</p>
+
+<p>The crucial part of computers is transistors. Transistors are essentially tiny
+switches that can either be on or off (1 or 0). We need to pass enough voltage
+and current through the control pin it allows flow of electricity.</p>
+
+<p>Software
+The BIOS connects the hardware to the Operating system. The operating system
+talks to the drivers and system applications. The bootloader is the first
+program that starts the computer. It loads the OS into
+the memory and starts the computer by connecting BIOS to OS and allows the OS to
+take over. Other applications compatabile with the OS can then run on the
+computer.</p>
+
+<h2 id="data-analysis">Data analysis</h2>
+<p>Once computers became in wide use, more and more data was being collected from
+it’s users. The information age means all the data we give our computers can be
+used by others (social media).</p>
+
+<p>We refer to data as unorganised. Information is organised data and allows us to
+gleam insights.</p>
+
+<p>Computers can only understand binary data (0,1). For example, when you write
+python code, the computer converts the code into binary data which is then
+passed to the CPU to carry out the instructions. Python complies to bytecode
+(.pyc files). The PVM runs the byte code by converting to binary code. The CPU
+then runs the binary data by running fetch-decode-execute cycle.</p>
+
+<p>The computer can only understand binary data essentially. Anything you run
+text, images and numbers have to be convertered to binary code for the computer
+to run.</p>
+
+<p>TODO: talk about RGB and Hexadecimal</p>
+
+<h2 id="programming">Programming</h2>
+<p>Algorithmns are like recipes. They give you instructions on what to do. When you
+write any program, you are writing algoritmns first then converting them into
+code for the computer to run.</p>
+
+<p>Programming languages
+Scripting languages</p>
+<ul>
+  <li>the code sits in the way it’s written and the computer it’s run on takes it
+and interprets it.</li>
+</ul>
+
+<p>Compiled language
+The code is compiled first into an exe file which is then used on the
+destination computer. The compiler does a big find and replace into smaller bits
+that the computer can understand. The compiler is done for speicific operating
+systems. That means exe can run on some OS but not others. Interpreted languages
+do not sufer from this since they have not been encoded yet.</p>
+
+<p>Query languge</p>
+<ul>
+  <li>used to interact with databases e.g. SQL</li>
+</ul>
+
+<p>Markup language</p>
+<ul>
+  <li>HTML</li>
+  <li>XML</li>
+</ul>
+
+<p>Programming fundamentals</p>
+<ul>
+  <li>for loops, while loops</li>
+  <li>conditional statements</li>
+  <li>functions</li>
+</ul>
+
+<p>Programming tips</p>
+<ul>
+  <li>write a spec</li>
+  <li>README file - documenting</li>
+  <li>testing</li>
+</ul>
+
+<h2 id="web-development">Web development</h2>
+<p>A network is a group of connected computers either via Ethernet or Wifi. Wireless is using radiowaves to send info.</p>
+
+<p>The internet is all the computers in the world connected via networks.
+When you are on your computer and you want to connect to the internet
+wirelessly. Your Wifi adapter sends a radio signal to your router. The router is
+your home’s hub controlling flow of signals to the internet. Modern routers
+contain modems which are the components that talk to the internet.
+The modem talks to Internet Service Provider (ISP) which is the main gateway to
+the internet. 
+ISP allow different routes to connect to the internet e.g. DSL, fiber optic and
+cable broadband.</p>
+
+<p>When you ask a website to be loaded. The information of that website is usually
+in a server somewhere. You the person with the device requesting the info are
+the client.</p>
+
+<p>TODO:
+The info is sent as packets via the TCP protocol.
+HTML - language to create sturcutre of a website
+HTTP - transfer info over internet. E.g. Chrome uses HTTP to send info to
+computers that store websites.
+Cybersecurity</p>
+
+<h1 id="object-oriented-programming">Object oriented programming</h1>
+<p>OOP can be thought of as a way of structuring code better.  To understand OOP, I will use python since I’m most familar with it.</p>
+
+<p>What is a class?</p>
+
+<p>Classes are essentially blueprints for data. It doesn’t inherently contain anything. When you create an instance of a class, that’s when the data comes in.</p>
+
+<p>An object is an instance of a class and is made up of:</p>
+<ul>
+  <li>state - properties of an object - this is variables like self.data</li>
+  <li>behaviour - response of an object to other objects - object methods - this is functions in the class</li>
+  <li>identity - unique name to object - Everytime you instantiate a class it will use a different memory address, so the value of different class instances will be different.</li>
+</ul>
+
+<p>When you create a class you also need an <strong>init</strong> method to give it instance attributes. They are values the class needs.</p>
+
+<p>Four main concepts in OOP</p>
+<ol>
+  <li>Encapsulation - bundle up functions in a class to simplify and make code modular</li>
+  <li>Inheritance - allows a parent class to be inherited into a child class</li>
+  <li>Abstraction - hide away details in the class so only what needs to be seen is seen.</li>
+  <li>
+    <p>Polymorphism - essentially the code can be morphed into many forms</p>
+  </li>
+  <li>
+    <p>Encapsulation:
+  putting funcs that affect a data in one class and limiting exposure of some of it’s components.</p>
+  </li>
+  <li>Inheritance:
+allows you to inherit variables and funcs from another class. Usually the child class (new class) needs to initialise both it’s own class and the parent class.
+    <ul>
+      <li>Method overriding: allows the child class to override existing functions in the parent class with it’s own funcs.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Polymorphism: 
+think of a USB port - it can be used for different things but it’s still one port - one interface. This one interface principle is polymorphism. When multiple classes inherit from the base class and have the has a common function, this creates a common interface. The child classes can also modify the function to do something different, but there is still a common interface as it has the same name.  The class that runs the common interface classes doesn’t need to know what specific behaviour is happening - it just calls the function name that’s common in all classes.</p>
+  </li>
+  <li>Abstraction: 
+  is the process of hiding the complex code and showing only what is necessary.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">():</span>
+    <span class="sh">"""</span><span class="s"> This is the parent class</span><span class="sh">"""</span>
+    <span class="c1"># Abstraction - this class hides complex operations that are generic to all BankAccounts
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">balance</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="c1"># OOP Encapsulation - single underscore means it's protected - not accessible outside the class.
+</span>        <span class="c1"># self._ means it's private. They can be accessed publicly using functions e.g withdraw.
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">_account_number</span> <span class="o">=</span> <span class="n">account_number</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">=</span> <span class="n">balance</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">balance</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">_balance</span>
+    
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="n">self</span><span class="p">.</span><span class="n">_balance</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">+=</span> <span class="n">amount</span>
+
+<span class="k">class</span> <span class="nc">CheckingAccount</span><span class="p">(</span><span class="n">BankAccount</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">This is a child class</span><span class="sh">"""</span>
+    <span class="c1"># OOP Inheritance - This class inherits from BankAccount
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">balance</span><span class="p">,</span> <span class="n">overdraft_limit</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="c1"># runs __init__ object of parent class
+</span>        <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">(</span><span class="n">account_number</span><span class="p">,</span> <span class="n">balance</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_overdraft_limit</span> <span class="o">=</span> <span class="n">overdraft_limit</span>
+
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">OOP Polymorphism - this func has the same name as withdraw func in
+        BankAccount but has overwriten the function. </span><span class="sh">"""</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">_overdraft_limit</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">class</span> <span class="nc">SavingAccount</span><span class="p">(</span><span class="n">BankAccount</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">This is a child class</span><span class="sh">"""</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="c1"># call the parent class's constructor
+</span>        <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">(</span><span class="n">account_number</span><span class="p">,</span> <span class="n">balance</span><span class="p">)</span>
+        <span class="n">interest_rate</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">interest_rate</span> <span class="o">=</span> <span class="n">interest_rate</span>
+    
+    <span class="k">def</span> <span class="nf">add_interest</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="c1">#TODO add interest rate to account
+</span>        <span class="c1"># will be polymorphism as it is adding a function to an inherited class
+</span>        <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">Bank</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">accounts</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">create_account</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_type</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">initial_balance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">account_type</span> <span class="o">==</span> <span class="sh">"</span><span class="s">checking</span><span class="sh">"</span><span class="p">:</span>
+            <span class="n">account</span> <span class="o">=</span> <span class="nc">CheckingAccount</span><span class="p">(</span><span class="n">account_number</span><span class="p">,</span> <span class="n">initial_balance</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">account_type</span> <span class="o">==</span> <span class="sh">"</span><span class="s">savings</span><span class="sh">"</span><span class="p">:</span>
+            <span class="n">account</span> <span class="o">=</span> <span class="nc">SavingAccount</span><span class="p">(</span><span class="n">account_number</span><span class="p">,</span> <span class="n">initial_balance</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="c1"># adds to dict of existing accounts
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">accounts</span><span class="p">[</span><span class="n">account_number</span><span class="p">]</span> <span class="o">=</span> <span class="n">account</span>
+
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="c1"># retreives account object using account number
+</span>        <span class="n">account</span>  <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">accounts</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">account_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">account</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">account</span><span class="p">.</span><span class="nf">deposit</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="n">account</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">accounts</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">account_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">account</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">account</span><span class="p">.</span><span class="nf">withdraw</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">):</span>
+        <span class="n">account</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">accounts</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">account_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">account</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">account</span><span class="p">.</span><span class="n">balance</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+
+    <span class="c1"># creates a bank object
+</span>    <span class="n">bank</span> <span class="o">=</span> <span class="nc">Bank</span><span class="p">()</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">bank</span><span class="p">)</span>
+
+    <span class="n">bank</span><span class="p">.</span><span class="nf">create_account</span><span class="p">(</span><span class="sh">"</span><span class="s">checking</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">12345</span><span class="sh">"</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span>
+    <span class="n">bank</span><span class="p">.</span><span class="nf">create_account</span><span class="p">(</span><span class="sh">"</span><span class="s">savings</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">4567</span><span class="sh">"</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">bank</span><span class="p">.</span><span class="nf">deposit</span><span class="p">(</span><span class="sh">"</span><span class="s">12345</span><span class="sh">"</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+    <span class="n">bank</span><span class="p">.</span><span class="nf">withdraw</span><span class="p">(</span><span class="sh">"</span><span class="s">12345</span><span class="sh">"</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">bank</span><span class="p">.</span><span class="nf">get_balance</span><span class="p">(</span><span class="sh">"</span><span class="s">12345</span><span class="sh">"</span><span class="p">))</span>
+
+</code></pre></div></div>

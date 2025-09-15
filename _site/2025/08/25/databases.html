@@ -1,0 +1,65 @@
+
+<h1 id="databases">Databases:</h1>
+
+<p>What is a database?</p>
+
+<p>Database for dummies book defines it as: self-describing collection of integrated
+records.</p>
+<ul>
+  <li>self describing: contains description of it’s own structure (metadata)</li>
+  <li>integrated: contains info on relationships within the db</li>
+  <li>records: records contains attributes</li>
+</ul>
+
+<p>Computers are great at storing and retrieving information.</p>
+
+<p>Database management software</p>
+<ul>
+  <li>used to define, administer, and process databases</li>
+  <li>To talk to the data we have database management software.</li>
+</ul>
+
+<p>There are two main types of databases:</p>
+<ul>
+  <li>relational databases (SQL) - structured data</li>
+  <li>non-relational databases (noSQL) - non structured data</li>
+</ul>
+
+<p>Relational database mangement systems (RDMS) are for relational databases
+examples include Postgres, mysql, sqllite.</p>
+
+<p>Where are they held?</p>
+<ul>
+  <li>sqlite holds entire db in one file</li>
+  <li>post gres - multiple files in a data cluster directory</li>
+</ul>
+
+<p>Relational database have tables that are independant of each other. Allows
+independant manipulation of tables as long as it doesn’t have a child table. We call them relational databases because they have relations with lots
+of tables</p>
+
+<p>SQL can be used to query a database, define the database schema, control access
+to the database and manipulate entries. SQL is also implemented differently between different database systems so a
+query or code that works in one won’t necessarily work in another.</p>
+
+<p>An important acroymn when talking about databases is CRUD (Create, Read, Update,Read). These are the common tasks a database needs to be able to do.</p>
+
+<p>database schema is blueprint of database and defines how data is organised within the database including:</p>
+<ul>
+  <li>data types</li>
+  <li>constraints</li>
+</ul>
+
+<p>Sql alchemy is a python library that lets you abstract away from a relational
+database management software. SQL alchemy lets you map python objects to SQL
+queries.</p>
+
+<p>In SQL alchemy,  the enigine is the start. The engine acts as a central source of connections to
+the database. It’s an object created once to connect - sort of like a door
+opening. A session is a python object that establishes and maintains all converstations
+between app and the databse. It’s a sort of holding spot for all the mapped
+objects. It manages any changes to objects and commits them to the datbas -
+maages orm operatios, transcactions. Now the fun stuff, the metadata. The tables you code up e.g. the rows and column
+info is called the Metadata. All the table info gets stored in one metadata
+instance.</p>
+
