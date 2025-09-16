@@ -1,0 +1,147 @@
+<p># How do heat pumps work?</p>
+
+<p>Let’s start from the fundamentals to understand how a heat pump works. Beginning with the <strong>First law of thermodynamics</strong> which states energy cannot be created or destroyed, it can only be transferred. It can also expressed as: 
+ΔU = Qnet - W
+Where:</p>
+<ul>
+  <li>ΔU is the change in internal energy</li>
+  <li>Qnet is the net heat added to the system</li>
+  <li>W is the work done by the system</li>
+</ul>
+
+<p>A basic diagram of the flow of energy for heat pumps:
+<img src="/assets/heat_pump_basic_diagram.png" alt="Alt text" style="max-width: 100%; height: auto;" />  <br />
+The equation for the first law of thermodynamics can be modified for heat pumps:</p>
+<ul>
+  <li>Work is done on the system by a compressor to transfer heat from a cold environment to a hot environment. Therefore, the work term becomes positive: -(-W).</li>
+  <li>At the end of a cycle the heat pump returns to the same state as at the beginning, so the change in internal energy in one cycle is zero: ΔU = 0</li>
+  <li>Qnet = Qcold - Qhot where Qcold is energy from cold environment and Qhot is the heat delivered to hot environment</li>
+</ul>
+
+<p>To get the performance of a heat pump we care about Qhot relative to the W we put in. If we substitute the work equation we found earlier 
+<img src="/assets/COPhp_basic.png" alt="Alt text" style="max-width: 100%; height: auto;" /></p>
+
+<p>Now we have the equation for the COP of heat pumps let’s turn to the second law of thermodynamics. The second law of thermodynamics states <strong>Heat will not spontaneously flow from a lower temperature to a higher temperature.</strong> This means that heat flows from hot to cold unless some energy is inputted which is what a heat pump does.</p>
+
+<p>The Carnot COP is the maximum COP that a heat pump can achieve in a given environment. We can understand this by looking at the reversed Carnot cycle which is applicable for heat pumps. The reversed carnot cycle consists of four reversible processes:</p>
+<ol>
+  <li><strong>Isothermal Expansion</strong>
+    <ul>
+      <li>Gas absorbs heat from cold environment -&gt; Entropy increases</li>
+      <li>Isothermal process is where the temperature remains constant</li>
+    </ul>
+  </li>
+  <li><strong>Adiabatic Compression</strong>
+    <ul>
+      <li>Gas is compressed, heating up gas. No heat transfer -&gt; Entropy remains constant.</li>
+      <li>Adiabatic is a process with no heat transfer</li>
+    </ul>
+  </li>
+  <li><strong>Isothermal Compression</strong>
+    <ul>
+      <li>Gas releases heat Qhot to the hot environment -&gt; Entropy decreases</li>
+      <li>Work is done on the system during compression</li>
+    </ul>
+  </li>
+  <li><strong>Adiabatic Expansion</strong>:
+    <ul>
+      <li>Gas expands, cooling to the cold environment temperature -&gt; entropy remains constant. Temperature drops</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/carnot_hp_cycle.png" alt="Alt text" style="max-width: 100%; height: auto;" /></p>
+
+<p>For a reversible cycle, the net entropy change of the system and environment is zero. This is because the system returns to its initial state after one full cycle, so its net entropy change is zero. <strong>Entropy gained by the environment</strong> equals <strong>entropy lost by the system</strong>.</p>
+
+<p><img src="/assets/carnot_equations.png" alt="Alt text" style="max-width: 100%; height: auto;" /></p>
+
+<p>We can then put this in the equation we derived earlier to get the Carnot COP.  This is the maximum theoretical efficiency a heat pump can achieve.
+<img src="/assets/carnot_equations.png" alt="Alt text" style="max-width: 100%; height: auto;" /></p>
+
+<p>In reality, the Carnot COP is hardly achieved due to:</p>
+<ul>
+  <li>Friction losses in mechanical parts</li>
+  <li>Heat loss from case</li>
+  <li>Refrigerant losses</li>
+  <li>Part load operation - cycling drops efficiency due to stop starts</li>
+  <li>Heat exchanger area - larger exchangers improve efficiency</li>
+  <li>Defrost cycles needed</li>
+  <li>Pumps and Fans require additional electrical input</li>
+</ul>
+
+<p>This is why standardised lab tests are conducted to find out the real performance of heat pumps in a range of conditions. For example, in Europe the EN 14825 is done. The EN 14825 calculates COP at different outdoor temperatures ( -7°C, +2°C, +7°C, +12°C) and part-load ratios (88%, 54%, 35%, 15% of design heating demand) at temperature profiles for average, warmer, and colder climates.</p>
+
+<p>We can also understand the heat pumps from the actual components:</p>
+
+<ol>
+  <li><strong>Refrigerant</strong>
+    <ul>
+      <li>Heat pumps operate using a special fluid called the refrigerant. What’s unique about refrigerants is that it boils at very low temperatures. This characteristic allows the capture of energy even from low temperatures. The refrigerant begins as a low pressure, low temperature liquid, which is directed to the evaporator.</li>
+    </ul>
+  </li>
+  <li><strong>Evaporator</strong>
+    <ul>
+      <li>The evaporator, a heat exchanger, interacting with outside air for air source heat pumps, causes the refrigerant to boil as ambient air passes over it, transforming the refrigerant into a low temperature cold vapour. As the liquid boils it gains energy from the outside air, causing it to evaporate into a gas. This vapour is then carried to the compressor. They also have a fan to ensure airflow over the heat exchanger.</li>
+    </ul>
+  </li>
+  <li><strong>Compressor</strong>
+    <ul>
+      <li>Before the compressor works, a reversing valve or a 4 way valve is used to switch between heating and cooling. It allows the flow to reversed when needed e.g. defrost it reverses to melt ice on the evaporator.</li>
+      <li>The compressor uses electricity to increase the pressure of the refrigerant which causes the temperature to rise. The high pressure high temperature vapour is then taken to the condenser.</li>
+    </ul>
+  </li>
+  <li><strong>Condenser</strong>
+    <ul>
+      <li>The condenser is a heat exchanger, which releases energy to the water in the storage tank. During this process, the refrigerant undergoes condensation, releasing energy and transforming into a liquid.</li>
+      <li>The refrigerant then passes out the storage tank and to the expansion vessel.</li>
+    </ul>
+  </li>
+  <li><strong>Expansion vessel</strong>
+    <ul>
+      <li>The expansion vessel drops the pressure, leading to a drop in temperature. The now low pressure, low temperature liquid repeats the cycle by returning to the evaporator.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/heat_pump_diagram.png" alt="Alt text" style="max-width: 100%; height: auto;" /></p>
+
+<h2 id="adoption-of-heat-pumps-in-the-uk">Adoption of heat pumps in the UK</h2>
+
+<p><strong>Why do we want to install heat pumps in the UK?</strong><br />
+Approximately 75% of the UK housing stock is heated by mains gas boilers. The gas comes from natural gas produced from the North Sea and imported gas. The UK is looking to reduce it’s reliance on fossil fuels as part of it’s 2050 net zero emission target, to do this UK is increasing it’s the renewable energy generation. As the grid becomes more decarbonised the clean electricity that is produced will need to be used in homes to reduce emissions and this is only possible if the heating systems in the homes are powered off electricity not gas. This is where the electrically driven heat pumps come in. Heat pumps work by extracting energy from sources like air, ground and water and transfer it to homes for space or water heating. By transferring the energy from natural sources, it allows the heat pump to deliver more energy than it uses - this is also what allows heat pumps to be typically three times more efficient than gas boilers.</p>
+
+<p><strong>What is the current status of heat pump installs?</strong><br />
+The UK has approximately 250,000 certified heat pumps installed in the UK. In 2024, there was approximately 60,000 heat pump installs carried out. The UK government has an aim to install 600,000 heat pumps annually in 2028 as part of the Energy Security Bill. France for comparison installed 620,000 heat pumps in 2022.</p>
+
+<p><strong>What are the main challengers to achieving 600,000 annual installs?</strong><br />
+There are three main challenges in installing heat pumps in the UK:</p>
+<ul>
+  <li>High upfront cost to replace gas boilers</li>
+  <li>Low running cost savings compared to gas boilers</li>
+  <li>Skilled work force - not enough qualified heat pump installers</li>
+</ul>
+
+<p>If we look at each of these:</p>
+
+<p><strong>High upfront costs</strong><br />
+The total cost of installing a heatpump can range from £10,000 to £18000 depending on house type, type of heat pump and specific install requirements. To incentivise people to install heat pumps, the government is offering £7,500 towards installing heat pumps in England and Wales as part of the Boiler Upgrade Scheme (BUS).</p>
+
+<p><strong>Low running costs savings</strong><br />
+If we take a house that has 10,000 kWh demand. A condensing gas boiler is typically 90% efficiency and the cost for gas in the UK April 2025 is approx 7p/kWh. This means the cost of meeting the demand with the gas boiler is: 10,000 kWh/0.9 * 7p/kWh = £777</p>
+
+<p>A heat pump typically has a COP of 3 and the cost of electricity in the UK April 2025 is approx 27p/kWh. The cost of meeting this house’s demand with the heat pump is: 10,000kWh/3 * 27p/kWh = £900</p>
+
+<p>This shows currently it’s more expensive to run heat pumps. However, the cost of electricity will fall as the grid is powered off more renewables. The cost of gas may also go up as natural sources become depleted. It is also worth noting, there are  heat pumps that have a COP of more than 3, this may make them cheaper than the example above.</p>
+
+<p><strong>Skilled workforce</strong><br />
+In 2023, there were 7,800 qualified heat pump engineers, the heat pump association (HPA) estimates 27,000 will be needed in 2028.  The UK government is offering £500 grants through the heat training grant to train heating engineers to become qualified heat pump installers.</p>
+
+<p><strong>Sources:</strong><br />
+https://news.net-zeroclub.co.uk/2025/03/17/uk-hvac-heat-pump-skills-shortage-future-solutions-ahead/<br />
+https://www.gov.uk/government/publications/heat-training-grant-for-heat-pumps<br />
+https://www.edie.net/mcs-2024-broke-records-for-rooftop-solar-and-heat-pump-installations/#:~:text=Installations%20soared%2043%25%20year%2Don,boiler%20with%20a%20heat%20pump.<br />
+https://www.heatpumps.london/blog/everything-you-need-to-know-about-heat-pumps
+https://energy-efficient-home.campaign.gov.uk/heat-pump/<br />
+https://www.apex-surveys.co.uk/post/what-is-the-real-cost-of-installing-an-air-source-heat-pump-in-2025</p>
+

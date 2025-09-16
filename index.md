@@ -41,5 +41,4 @@ title: Home
   </article>
 {% endfor %}
 
-## TODO Pet projects
 
