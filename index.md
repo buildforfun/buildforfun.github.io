@@ -5,6 +5,20 @@ title: Home
 
 # My knowledge
 
+## Life
+{% for post in site.categories.life %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  </article>
+{% endfor %}
+
+## Psychology
+{% for post in site.categories.psychology %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  </article>
+{% endfor %}
+
 ## Building Energy Modelling
 {% for post in site.categories.bem %}
   <article>
@@ -19,6 +33,7 @@ title: Home
   </article>
 {% endfor %}
 
+
 ## Foundational knowledge
 {% for post in site.categories.foundation %}
   <article>
@@ -26,17 +41,5 @@ title: Home
   </article>
 {% endfor %}
 
-## Psychology
-{% for post in site.categories.psychology %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  </article>
-{% endfor %}
-
-## Life
-{% for post in site.categories.life %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  </article>
-{% endfor %}
+## TODO Pet projects
 
